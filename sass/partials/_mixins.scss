@@ -1,0 +1,28 @@
+@import './variables';
+
+@function convertRem($val-pixel) {
+    @return ($val-pixel / 16)+rem;
+}
+
+@mixin responsive($val-width) {
+    @media screen and (max-width: $val-width) {
+        @content;
+    }
+}
+
+
+@mixin transition-ease-in-out() {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin flexCenter($val-direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $val-direction;
+}
+
+@mixin color-font-footer {
+    font-size: 0.8125rem;
+    color: $color-text-footer;
+}
