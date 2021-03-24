@@ -1,0 +1,27 @@
+{
+  "name": "oe42-fe-pr1-tri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awesome-academy/OE42-FE-PR1-Tri.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awesome-academy/OE42-FE-PR1-Tri/issues"
+  },
+  "homepage": "https://github.com/awesome-academy/OE42-FE-PR1-Tri#readme"
+}
