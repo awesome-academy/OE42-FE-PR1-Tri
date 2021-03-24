@@ -1,0 +1,290 @@
+@import '../partials/mixins';
+@import '../partials/fonts';
+
+.header {
+
+    &__description {
+        background: $color-dark;
+        color: $color-gray;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .header__description-left {
+                display: flex;
+                line-height: convertRem(30);
+
+                .header__description-open-door {
+                    font-size: convertRem(12);
+                    margin-right: convertRem(20);
+
+                    span {
+                        margin-right: 0.5rem;
+
+                        i {
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+
+                .header__description-icon-contact {
+                    ul {
+                        display: flex;
+                        height: 100%;
+
+                        li {
+                            border-left: 1px solid $color-gray-dark;
+
+                            &:last-child {
+                                border-right: 1px solid $color-gray-dark;
+                            }
+
+                            a {
+                                width: convertRem(36);
+                                height: 100%;
+                                @include flexCenter(row);
+                                color: $color-gray;
+                                font-size: 0.8125rem;
+                                @include transition-ease-in-out;
+
+                                &:hover {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__description-right {
+                display: flex;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        border-left: 1px solid $color-gray-dark;
+
+                        &:last-child {
+                            border-right: 1px solid $color-gray-dark;
+                        }
+
+                        a {
+                            display: block;
+                            color: $color-gray;
+                            padding: 0 1rem;
+                            height: 100%;
+                            font-size: convertRem(12);
+                            @include flexCenter(row);
+                            @include transition-ease-in-out;
+
+                            &:hover {
+                                color: $color-white;
+                            }
+
+                            i {
+                                margin-right: 0.25rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        background: linear-gradient($color-light-weight, #eeeeee, $color-light-weight);
+        padding-bottom: convertRem(10);
+
+        .header__logo {
+            display: flex;
+
+            .logo {
+                line-height: 0.2;
+                padding: convertRem(10) 0 convertRem(20);
+                margin-right: 0.5rem;
+
+                h1 {
+                    font-size: convertRem(50);
+
+                    a {
+                        color: $color-green;
+
+                        span {
+                            font-family: $font-redressed;
+                            color: $color-green;
+                            margin-left: 0.25rem;
+                            font-size: convertRem(60);
+                        }
+
+                    }
+                }
+
+                span {
+                    color: $color-gray;
+                    font-size: convertRem(20);
+                }
+            }
+
+            .img {
+                width: 100%;
+
+                img {
+                    width: convertRem(172);
+                    object-fit: cover;
+                    height: convertRem(120);
+                }
+            }
+        }
+
+        .header-search-cart {
+            display: flex;
+
+            .header__search {
+                @include flexCenter(column);
+                height: 100%;
+                width: 70%;
+
+                .support {
+                    margin-bottom: 0.5rem;
+
+                    span {
+                        text-transform: uppercase;
+                        color: $color-gray;
+                        font-size: convertRem(14);
+
+                        i {
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+
+                .search {
+                    width: 100%;
+
+                    form {
+                        width: 100%;
+                        position: relative;
+                        height: convertRem(42);
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: convertRem(60);
+                            padding: 0.75rem 1rem;
+                            font-size: 0.8125rem;
+                            border: 1px solid $color-white;
+                            @include transition-ease-in-out;
+
+                            &:focus {
+                                border-color: $color-green;
+                            }
+                        }
+
+                        button {
+                            position: absolute;
+                            right: 2px;
+                            padding: 0 convertRem(20);
+                            height: 80%;
+                            top: 3px;
+                            border-left: 1px solid $color-ebebeb;
+                            background: $color-white;
+                            border-top-right-radius: convertRem(60);
+                            border-bottom-right-radius: convertRem(60);
+                            color: $color-gray;
+                            @include transition-ease-in-out;
+
+                            &:hover {
+                                color: $color-green;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__cart {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                a {
+                    font-size: convertRem(15);
+                    margin-top: convertRem(20);
+                    @include transition-ease-in-out;
+
+                    i {
+                        margin-right: 0.5rem;
+                        font-size: convertRem(24);
+                    }
+
+                    &:hover {
+                        color: $color-green;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .navbar {
+        background: $color-green !important;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        button {
+            // display: block;
+            border: 0;
+            margin-bottom: convertRem(10);
+
+            .navbar-toggler-icon {
+                color: $color-white !important;
+            }
+        }
+
+        #collapseResponsive {
+            .navbar-nav {
+                @media screen and(min-width: 992px) {
+                    margin-left: convertRem(50);
+                }
+
+                .nav-item {
+                    .nav-link {
+                        color: $color-white;
+                        padding: 0.75rem 1.25rem;
+                        text-transform: uppercase;
+                        @include transition-ease-in-out;
+
+                        &.active {
+                            background: $color-dark-green;
+                        }
+
+                        &:hover {
+                            background: $color-dark-green;
+                        }
+
+                    }
+
+                    .dropdown-menu {
+                        top: 45px;
+
+                        li {
+                            .dropdown-item {
+                                text-transform: uppercase;
+                                color: $color-dark;
+                                font-size: 0.9rem;
+                                @include transition-ease-in-out;
+
+                                &:hover {
+                                    color: $color-white;
+                                    background-color: $color-dark-green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

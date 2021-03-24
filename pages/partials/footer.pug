@@ -1,0 +1,67 @@
+include ../variables/variable_footer
+footer#footer 
+    .footer__header
+        .container  
+            .row 
+                .col-12.col-lg-4.footer__header-left
+                    h5 Kênh thông tin từ chúng tôi : 
+                    ul.icon 
+                        each icon in icon_connects
+                            +icon-contact(class=icon)
+                .col-12.col-lg-8.footer__header-right 
+                    .email 
+                        span Đăng ký nhận 
+                        span Email từ chúng tôi
+                    .form-email 
+                        form(action="")
+                            input(type="text") 
+                            button(type="submit")
+                                i(class=paper_plane)
+    .footer__content 
+        .container 
+            .row 
+                .col-12.col-lg-4.footer__content-left
+                    div.logo 
+                        h1 
+                            a(href="#") Green
+                                span Shop
+                        span Món quà từ thiên nhiên
+                    p Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển
+                    ul 
+                        each item in connects
+                            - const {classes, description} = item
+                                +connects(description)(class=classes)
+                .col-12.col-lg-8.footer__content-right
+                    .row 
+                        each store in store_info 
+                            .col-12.col-lg-3
+                                h5.title= store
+                                ul 
+                                    if store == "Thông tin khách hàng"
+                                        each item in customer_info
+                                            +info(item)(class=icon_list)
+                                    else if store == "Hỗ trợ dịch vụ"
+                                        each item in service_support
+                                            +info(item)(class=icon_list)
+                                    else if store == "Chính sách ưu đãi"
+                                        each item in incentives
+                                            +info(item)(class=icon_list)
+                                    else
+                                        each item in news
+                                            +info(item)(class=icon_list)
+    .footer__bottom
+        .container 
+            .row
+                .col-12.col-md-8.footer__bottom-left 
+                    ul 
+                        each item in generals
+                            +general_info(item) 
+                            
+                .col-12.col-md-3.footer__bottom-right 
+                    ul
+                        each icon in payments
+                            +icon-contact(class=icon)
+    .footer_copyright
+        .container 
+            p Thiết kế bởi Bizweb &copy;
+

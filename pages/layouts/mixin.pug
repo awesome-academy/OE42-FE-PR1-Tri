@@ -1,0 +1,51 @@
+include ../variables/variable_header
+
+mixin icon-contact
+    li 
+        a(href="#")
+            i&attributes(attributes)
+mixin signs(signs)
+    li 
+        a(href="#")
+            i&attributes(attributes) 
+            | #{signs}
+mixin connects(item)
+    li 
+        span
+            i&attributes(attributes) 
+            | #{item}
+mixin menu(name)
+    if name == "Sản Phẩm"
+        li.nav-item.dropdown 
+            a.nav-link.dropdown-toggle(href="#",id="submenu_1", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", role="button")= name 
+            ul.dropdown-menu(aria-labelledby="submenu_1")
+                each item_sub in nav_products
+                    +submenu(item_sub)
+    else if name == "Sản Phẩm Mới"
+         li.nav-item.dropdown 
+            a.nav-link.dropdown-toggle(href="#",id="submenu_2", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")= name 
+            ul.dropdown-menu(aria-labelledby="submenu_2")
+                each item_sub in nav_new_Products
+                    +submenu(item_sub)
+    else if name == "Trang Chủ"
+        li.nav-item 
+            a.nav-link.active(href="#")= name
+    else
+        li.nav-item 
+            a.nav-link(href="#")= name 
+    
+
+mixin submenu(submenu_name)
+     li
+        a.dropdown-item(href="#")= submenu_name
+
+
+mixin info(name)
+    li 
+        a(href="#")
+            i&attributes(attributes)
+            | #{name}
+
+mixin general_info(name)
+    li 
+        a(href="#")= name 

@@ -1,0 +1,247 @@
+@import '../partials/mixins';
+@import '../partials/fonts';
+
+#footer {
+    background: $color-footer;
+    color: $color-gray;
+
+    .footer__header {
+        padding: convertRem(40) 0;
+        border-bottom: 1px solid $color-border-footer;
+
+        &-left {
+            h5 {
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .icon {
+                display: flex;
+
+                li {
+                    a {
+                        padding-right: convertRem(20);
+                        color: $color-gray;
+                        @include transition-ease-in-out;
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            justify-content: space-between;
+
+            .email {
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    line-height: 1.8;
+                }
+            }
+
+            .form-email {
+                width: 60%;
+                margin-right: 90px;
+
+                form {
+                    width: 100%;
+                    height: convertRem(48);
+                    position: relative;
+
+                    input {
+                        @extend form;
+                        border: 1px solid $color-white;
+                        @include transition-ease-in-out;
+
+                        &:focus {
+                            border-color: $color-green;
+                        }
+                    }
+
+                    button {
+                        width: convertRem(50);
+                        height: convertRem(48);
+                        position: absolute;
+                        right: 0;
+                        background: $color-green;
+                        border: 1px solid $color-green;
+                        @include transition-ease-in-out;
+
+                        &:hover {
+                            background: $color-dark-green;
+                        }
+
+                        i {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__content {
+        border-bottom: 1px solid $color-border-footer;
+        padding: convertRem(40) 0;
+
+        &-left {
+            .logo {
+                margin-bottom: 1rem;
+
+                h1 {
+                    font-size: convertRem(50);
+                    line-height: 0.7;
+
+                    a {
+                        color: $color-green;
+
+                        span {
+                            font-family: $font-redressed;
+                            color: $color-green;
+                            margin-left: 0.25rem;
+                            font-size: convertRem(60);
+                        }
+
+                    }
+                }
+
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+
+            p {
+                @include color-font-footer;
+                line-height: 1.8;
+            }
+
+            ul {
+                li {
+                    line-height: 1.8;
+
+                    span {
+                        @include color-font-footer;
+
+                        i {
+                            width: 1.2rem;
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            .title {
+                font-size: 0.825rem;
+                font-weight: 600;
+                color: $color-green;
+                text-transform: uppercase;
+            }
+
+            ul {
+                li {
+                    line-height: 2;
+
+                    a {
+                        @include color-font-footer;
+                        display: block;
+                        @include transition-ease-in-out;
+
+                        i {
+                            margin-right: 0.25rem;
+                            font-size: 0.75rem;
+                        }
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        padding: convertRem(20) 0;
+        border-bottom: 1px solid $color-border-footer;
+
+        .container {
+            .row {
+                justify-content: space-between;
+
+                .footer__bottom-left {
+                    ul {
+                        display: flex;
+
+
+                        li {
+                            a {
+                                padding: 0.5rem 0.625rem;
+                                @include color-font-footer;
+                                @include transition-ease-in-out;
+
+                                &:hover {
+                                    color: $color-white;
+                                }
+                            }
+
+                            &:first-child {
+                                a {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer__bottom-right {
+                    ul {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-right: convertRem(80);
+
+                        li {
+                            a {
+                                color: $color-text-footer;
+                                padding: 0.625rem;
+                                @include transition-ease-in-out;
+
+                                &:hover {
+                                    color: $color-white;
+                                }
+
+                                i {
+                                    font-size: 1.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_copyright {
+        padding: 0.75rem 0;
+        background: #434343;
+
+        p {
+            margin: 0;
+            color: $color-white;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+    }
+}

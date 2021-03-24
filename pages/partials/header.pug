@@ -1,0 +1,57 @@
+include ../variables/variable_header
+include ../variables/variable_links
+header.header 
+    .header__description
+        .container 
+            .header__description-left 
+                .header__description-open-door
+                    span
+                        i.fas.fa-clock
+                        | Open time: 8:00 - 18:00
+                    span Monday - Sunday
+                .header__description-icon-contact 
+                    ul 
+                        each item in icon_contacts
+                            +icon-contact(class=item)
+            .header__description-right
+                ul 
+                    each signs in users
+                        +signs(signs.log)(class=signs.classes)
+    .header__content 
+        .container
+            .row 
+                .col-12.col-lg-6 
+                    .header__logo 
+                        .logo  
+                            h1 
+                                a(href="#") Green
+                                    span Shop
+                            span Món quà từ thiên nhiên
+                        .img 
+                            img(src=`${link_images}/logo.png` alt="logo")
+                .col-12.col-lg-6.header-search-cart 
+                    .header__search 
+                        .support 
+                            span  
+                                i(class=phone)
+                                | Hỗ trợ: (04) 6674 2332 - (04) 3786 8904
+
+                        .search
+                            form( method="post") 
+                                input(type="text" placeholder="Tìm kiếm...")
+                                button(type="submit")
+                                    i(class=search)
+                            
+                    .header__cart            
+                        a(href="") 
+                            i(class=shopping_cart)
+                            | 0 Sản Phẩm
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container  
+            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#collapseResponsive",aria-controls="collapseResponsive" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#collapseResponsive
+                ul.navbar-nav
+                    each item in nav_links
+                        +menu(item)
+    
