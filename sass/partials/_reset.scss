@@ -1,0 +1,44 @@
+@import './fonts';
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: $font-playfair;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+button {
+    outline: 0 !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+
+    &:hover {
+        text-decoration: none;
+        color: #222;
+
+    }
+}
+
+input {
+    outline: 0;
+    border: 0;
+}
+
+.container {
+    padding: 0;
+}

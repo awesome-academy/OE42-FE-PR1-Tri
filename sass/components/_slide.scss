@@ -1,0 +1,66 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+@import '../partials/fonts';
+
+.section__slides {
+    height: 600px;
+
+    #carouselExampleIndicators {
+        height: 100%;
+
+        ol {
+            li {
+                width: 0.75rem;
+                height: 0.75rem;
+                border-radius: 50%;
+                background: $color-white;
+                border: 0;
+            }
+
+            .active {
+                background: $color-green;
+            }
+        }
+
+        .carousel-inner {
+            height: 100%;
+
+            .carousel-item {
+                position: relative;
+
+                img {
+                    height: 600px;
+                    object-fit: cover;
+                }
+
+                .title {
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    position: absolute;
+                    @include flexCenter(column);
+                    color: $color-white;
+                    background: rgba(255, 255, 255, 0.1);
+
+                    h1 {
+                        text-transform: uppercase;
+                        font-size: 3rem;
+                        font-weight: bold;
+                        margin-bottom: 1rem;
+                    }
+
+                    h5 {
+                        text-transform: uppercase;
+                        font-family: $font-redressed;
+                        font-size: 3.5rem;
+                    }
+
+                    p {
+                        font-style: italic;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+extend ./layouts/layout
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+
+block main 
+    include ./variables/variable_homepage
+    main#main 
+        section.section__slides 
+            #carouselExampleIndicators.carousel.slide(data-ride="carousel") 
+                ol.carousel-indicators
+                    each slide in data_slides
+                        if slide == "0"
+                            +data_slide(slide)(class="active")
+                        else 
+                            +data_slide(slide)
+                .carousel-inner
+                    each img, index in image_slides
+                        if index == 0
+                            +carousel-item(img)(class="active")
+                        else
+                            +carousel-item(img)
