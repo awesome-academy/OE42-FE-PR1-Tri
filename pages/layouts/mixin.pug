@@ -50,14 +50,3 @@ mixin general_info(name)
     li 
         a(href="#")= name 
 
-
-mixin data_slide(str_number)
-    li(data-target="#carouselExampleIndicators", data-slide-to=str_number)&attributes(attributes)
-
-mixin carousel-item(img)
-    div.carousel-item&attributes(attributes)
-        img.d-block.w-100(src=img, alt="link error")
-        .title 
-            h1 Green Shop
-            h5 Cho thuê cây cảnh tết 2016
-            p (Miễn phí vận chuyển với những đơn hàng có giá trị trên 5.000.000đ)

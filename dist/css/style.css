@@ -4,8 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -191,12 +190,7 @@ input {
   padding-top: 0;
   padding-bottom: 0; }
   .header .navbar button {
-    border: 0; }
-    .header .navbar button .navbar-toggler-icon {
-      color: #fff !important; }
-  @media screen and (max-width: 992px) {
-    .header .navbar #collapseResponsive .navbar-nav {
-      margin-top: 10px; } }
+
   @media screen and (min-width: 992px) {
     .header .navbar #collapseResponsive .navbar-nav {
       margin-left: 3.125rem; } }
@@ -220,48 +214,6 @@ input {
         color: #fff;
         background-color: #36a66d; }
 
-.section__slides {
-  height: 600px; }
-  .section__slides #carouselExampleIndicators {
-    height: 100%; }
-    .section__slides #carouselExampleIndicators ol li {
-      width: 0.75rem;
-      height: 0.75rem;
-      border-radius: 50%;
-      background: #fff;
-      border: 0; }
-    .section__slides #carouselExampleIndicators ol .active {
-      background: #3fb871; }
-    .section__slides #carouselExampleIndicators .carousel-inner {
-      height: 100%; }
-      .section__slides #carouselExampleIndicators .carousel-inner .carousel-item {
-        position: relative; }
-        .section__slides #carouselExampleIndicators .carousel-inner .carousel-item img {
-          height: 600px;
-          object-fit: cover; }
-        .section__slides #carouselExampleIndicators .carousel-inner .carousel-item .title {
-          width: 100%;
-          height: 100%;
-          top: 0;
-          position: absolute;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          color: #fff;
-          background: rgba(255, 255, 255, 0.1); }
-          .section__slides #carouselExampleIndicators .carousel-inner .carousel-item .title h1 {
-            text-transform: uppercase;
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem; }
-          .section__slides #carouselExampleIndicators .carousel-inner .carousel-item .title h5 {
-            text-transform: uppercase;
-            font-family: "Redressed", cursive;
-            font-size: 3.5rem; }
-          .section__slides #carouselExampleIndicators .carousel-inner .carousel-item .title p {
-            font-style: italic;
-            font-size: 0.85rem; }
 
 #footer {
   background: #313131;

@@ -244,9 +244,6 @@
 
         #collapseResponsive {
             .navbar-nav {
-                @media screen and (max-width: 992px) {
-                    margin-top: 10px;
-                }
 
                 @media screen and(min-width: 992px) {
                     margin-left: convertRem(50);
