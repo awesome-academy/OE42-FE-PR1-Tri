@@ -4,6 +4,7 @@ block append links
 
 block main 
     include ./variables/variable_homepage
+    include ./variables/variable_links
     main#main 
         section.section__slides 
             #carouselExampleIndicators.carousel.slide(data-ride="carousel") 
@@ -19,3 +20,103 @@ block main
                             +carousel-item(img)(class="active")
                         else
                             +carousel-item(img)
+        section.section__hot-products 
+            .container 
+                .product-categories 
+                    span Sản phẩm nổi bật 
+                .row.product 
+                    .col-12.col-md-6.product-left
+                        .product-left-top.img-big
+                            div.img  
+                                img(src=`${link_images}/spx2-4.png`, alt="spx2-4.png")
+                                span.new New
+                                div 
+                                    button Mua ngay 
+                                    a(href="#")
+                                        i(class=search_product) 
+                            div.description 
+                                span.name-product Cây chân chim 
+                                .rating-box 
+                                    span.rating 
+                                .price 
+                                    span.price-new 250.000 đ
+                                    span.price-old 250.000 đ
+                        .product-left-bottom.img-small
+                            div.wrapper
+                                .img 
+                                    img(src=`${link_images}/spx2-11.png`, alt="spx2-11.png")
+                                    span.sale -50%
+                                    div 
+                                        button Mua ngay 
+                                        a(href="#")
+                                            i(class=search_product)
+                                .description 
+                                    span.name-product Cây cọ ta
+                                    .rating-box 
+                                        span.rating 
+                                    .price 
+                                        span.price-new 150.000 đ
+                                        span.price-old 250.000 đ
+                            div.wrapper
+                                .img 
+                                    img(src=`${link_images}/spx2-6.png`, alt="spx2-6.png") 
+                                    div 
+                                        button Mua ngay 
+                                        a(href="#")
+                                            i(class=search_product)
+                                .description 
+                                    span.name-product Cây dứa nhỏ
+                                    .rating-box 
+                                        span.rating 
+                                    .price 
+                                        span.price-new 375.000 đ
+                                        span.price-old 250.000 đ
+                    .col-12.col-md-6.product-right
+                        .product-right-top.img-small 
+                            div.wrapper
+                                .img 
+                                    img(src=`${link_images}/spx2-5.png`, alt="spx2-5.png")
+                                    span.sale -50%
+                                    div 
+                                        button Mua ngay 
+                                        a(href="#")
+                                            i(class=search_product)
+                                .description 
+                                    span.name-product Cây dạ lam
+                                    .rating-box 
+                                        span.rating 
+                                    .price 
+                                        span.price-new 250.000 đ
+
+                                        span.price-old 500.000 đ
+                            div.wrapper
+                                .img  
+                                    img(src=`${link_images}/spx2-15.png`, alt="spx2-15.png")
+                                    span.new New
+                                    div 
+                                        button Mua ngay 
+                                        a(href="#")
+                                            i(class=search_product)
+                                .description 
+                                    span.name-product Cây danh dự
+                                    .rating-box 
+                                        span.rating 
+                                    .price 
+                                        span.price-new 850.000 đ
+
+                                        span.price-old 250.000 đ
+                        .product-right-bottom.img-big
+                            div.img    
+                                img(src=`${link_images}/spx2-3.png`, alt="spx2-3.png")
+                                span.sale -50%
+                                div 
+                                    button Mua ngay 
+                                    a(href="#")
+                                        i(class=search_product) 
+                            div.description 
+                                span.name-product Cây chân chim 
+                                .rating-box 
+                                    span.rating 
+                                .price 
+                                    span.price-new 250.000 đ
+                                    span.price-old 250.000 đ

@@ -1,0 +1,266 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+@import '../partials/fonts';
+
+.section__hot-products {
+    padding: convertRem(40) 0;
+
+    .product-categories {
+        position: relative;
+        margin-bottom: 2.5rem;
+
+        span {
+            color: $color-green;
+            border-bottom: 2px solid $color-green;
+            font-weight: 600;
+            padding: convertRem(10) 0;
+            font-weight: 1.25rem;
+            z-index: 1;
+        }
+
+        &::after {
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            content: " ";
+            background: rgba(129, 127, 127, 0.2);
+            top: 33px;
+            left: 0;
+        }
+    }
+
+    .product {
+        &-left {
+            display: flex;
+            flex-direction: column;
+
+            &-top {
+                margin-bottom: convertRem(30);
+            }
+        }
+
+        &-right {
+            @extend .product-left;
+
+            &-top {
+                margin-bottom: convertRem(30);
+            }
+        }
+
+        .img-big {
+            width: 100%;
+            border: 1px solid rgba(129, 127, 127, 0.2);
+            border-radius: 5px;
+
+            .img {
+                height: convertRem(480);
+                width: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                span {
+                    position: absolute;
+                    left: 35px;
+                    top: 35px;
+                    @include circle(60);
+                    color: $color-white;
+                    @include flexCenter(row);
+                    text-transform: uppercase;
+                    font-size: 0.85rem;
+
+                    &.new {
+                        background: $color-green;
+                    }
+
+                    &.sale {
+                        background: $color-red;
+                    }
+                }
+
+                &:hover {
+                    div {
+                        transform: scale(1);
+                    }
+                }
+
+                div {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    @include flexCenter(row);
+                    top: 0;
+                    transform: scale(0);
+                    background: rgba(129, 127, 127, 0.2);
+                    @include transition-ease-in-out;
+
+                    button {
+                        text-transform: uppercase;
+                        padding: convertRem(10) convertRem(35);
+                        color: $color-white;
+                        background-color: $color-green;
+                        border-radius: convertRem(30);
+                        font-size: 0.85rem;
+                        margin-right: convertRem(10);
+                        height: convertRem(45);
+                        @include transition-ease-in-out;
+
+                        &:hover {
+                            background: $color-dark-green;
+                        }
+                    }
+
+                    a {
+                        @include circle(45);
+                        background: $color-white;
+                        @include flexCenter(row);
+                        @include transition-ease-in-out;
+
+                        i {
+                            font-size: 0.75rem;
+                        }
+
+                        &:hover {
+                            color: $color-green;
+                        }
+                    }
+                }
+            }
+        }
+
+        .img-small {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .wrapper {
+                width: 47.3%;
+                border: 1px solid rgba(129, 127, 127, 0.2);
+                border-radius: 5px;
+
+                .img {
+                    width: 100%;
+                    height: convertRem(220);
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    span {
+                        position: absolute;
+                        left: 25px;
+                        top: 25px;
+                        @include circle(60);
+                        color: $color-white;
+                        @include flexCenter(row);
+                        text-transform: uppercase;
+                        font-size: 0.85rem;
+
+                        &.new {
+                            background: $color-green;
+                        }
+
+                        &.sale {
+                            background: $color-red;
+                        }
+                    }
+
+                    &:hover {
+                        div {
+                            transform: scale(1);
+                        }
+                    }
+
+                    div {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        @include flexCenter(row);
+                        top: 0;
+                        transform: scale(0);
+                        background: rgba(129, 127, 127, 0.2);
+                        @include transition-ease-in-out;
+
+                        button {
+                            text-transform: uppercase;
+                            padding: convertRem(10) convertRem(35);
+                            color: $color-white;
+                            background-color: $color-green;
+                            border-radius: convertRem(30);
+                            font-size: 0.85rem;
+                            margin-right: convertRem(10);
+                            height: convertRem(45);
+                            @include transition-ease-in-out;
+
+                            &:hover {
+                                background: $color-dark-green;
+                            }
+                        }
+
+                        a {
+                            @include circle(45);
+                            background: $color-white;
+                            @include flexCenter(row);
+                            @include transition-ease-in-out;
+
+                            i {
+                                font-size: 0.75rem;
+                            }
+
+                            &:hover {
+                                color: $color-green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .description {
+            margin: 1.5rem 0;
+            text-align: center;
+
+            .name-product {
+                font-size: 1.125rem;
+                line-height: 2;
+                color: $color-text-product;
+            }
+
+            .rating-box {
+                width: 68px;
+                height: 11px;
+                overflow: hidden;
+                background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll;
+                margin: 0.25rem auto;
+
+                .rating {
+                    height: 100%;
+                    background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll 0 100%;
+                    width: 93%;
+                    display: block;
+                }
+
+            }
+
+            .price {
+                &-new {
+                    font-size: 1.25rem;
+                    color: $color-red;
+                    margin-right: 1rem;
+                }
+
+                &-old {
+                    color: $color-gray;
+                    text-decoration: line-through;
+                }
+            }
+
+        }
+    }
+
+}
