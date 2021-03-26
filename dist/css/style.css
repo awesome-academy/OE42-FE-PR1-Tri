@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -189,10 +190,7 @@ input {
   padding-top: 0;
   padding-bottom: 0; }
   .header .navbar button {
-    border: 0;
-    margin-bottom: 0.625rem; }
-    .header .navbar button .navbar-toggler-icon {
-      color: #fff !important; }
+
   @media screen and (min-width: 992px) {
     .header .navbar #collapseResponsive .navbar-nav {
       margin-left: 3.125rem; } }
@@ -215,6 +213,7 @@ input {
       .header .navbar #collapseResponsive .navbar-nav .nav-item .dropdown-menu li .dropdown-item:hover {
         color: #fff;
         background-color: #36a66d; }
+
 
 #footer {
   background: #313131;

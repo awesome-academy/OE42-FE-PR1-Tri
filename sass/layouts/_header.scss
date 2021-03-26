@@ -236,7 +236,6 @@
         button {
             // display: block;
             border: 0;
-            margin-bottom: convertRem(10);
 
             .navbar-toggler-icon {
                 color: $color-white !important;
@@ -245,6 +244,7 @@
 
         #collapseResponsive {
             .navbar-nav {
+
                 @media screen and(min-width: 992px) {
                     margin-left: convertRem(50);
                 }
