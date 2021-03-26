@@ -26,3 +26,9 @@
     font-size: 0.8125rem;
     color: $color-text-footer;
 }
+
+@mixin circle($val) {
+    height: convertRem($val);
+    width: convertRem($val);
+    border-radius: 50%;
+}
