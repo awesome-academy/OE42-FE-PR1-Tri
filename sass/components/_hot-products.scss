@@ -1,33 +1,63 @@
 @import '../partials/variables';
 @import '../partials/mixins';
-@import '../partials/fonts';
+
+.product-categories {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    span {
+        color: $color-green;
+        border-bottom: 2px solid $color-green;
+        font-weight: 600;
+        padding: convertRem(10) 0;
+        font-weight: 1.25rem;
+        z-index: 1;
+    }
+
+    &::after {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        content: " ";
+        background: $color-border-product;
+        top: 33px;
+        left: 0;
+    }
+
+    ul {
+        display: flex;
+        float: right;
+
+        li {
+            width: convertRem(22);
+            height: convertRem(22);
+
+            &:last-child {
+                margin-right: 0.25rem;
+            }
+
+            a {
+                display: block;
+                @include circle(22);
+                border: 1px solid $color-border-product;
+                @include flexCenter(row);
+                color: $color-gray;
+                @include transition-ease-in-out;
+
+                i {
+                    font-size: 0.75rem;
+                }
+
+                &:hover {
+                    border-color: $color-gray;
+                }
+            }
+        }
+    }
+}
 
 .section__hot-products {
     padding: convertRem(40) 0;
-
-    .product-categories {
-        position: relative;
-        margin-bottom: 2.5rem;
-
-        span {
-            color: $color-green;
-            border-bottom: 2px solid $color-green;
-            font-weight: 600;
-            padding: convertRem(10) 0;
-            font-weight: 1.25rem;
-            z-index: 1;
-        }
-
-        &::after {
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            content: " ";
-            background: rgba(129, 127, 127, 0.2);
-            top: 33px;
-            left: 0;
-        }
-    }
 
     .product {
         &-left {
@@ -49,7 +79,7 @@
 
         .img-big {
             width: 100%;
-            border: 1px solid rgba(129, 127, 127, 0.2);
+            border: 1px solid $color-border-product;
             border-radius: 5px;
 
             .img {
@@ -94,7 +124,7 @@
                     @include flexCenter(row);
                     top: 0;
                     transform: scale(0);
-                    background: rgba(129, 127, 127, 0.2);
+                    background: $color-border-product;
                     @include transition-ease-in-out;
 
                     button {
@@ -138,7 +168,7 @@
 
             .wrapper {
                 width: 47.3%;
-                border: 1px solid rgba(129, 127, 127, 0.2);
+                border: 1px solid $color-border-product;
                 border-radius: 5px;
 
                 .img {
@@ -183,7 +213,7 @@
                         @include flexCenter(row);
                         top: 0;
                         transform: scale(0);
-                        background: rgba(129, 127, 127, 0.2);
+                        background: $color-border-product;
                         @include transition-ease-in-out;
 
                         button {

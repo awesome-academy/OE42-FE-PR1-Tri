@@ -61,3 +61,37 @@ mixin carousel-item(img)
             h1 Green Shop
             h5 Cho thuê cây cảnh tết 2016
             p (Miễn phí vận chuyển với những đơn hàng có giá trị trên 5.000.000đ)
+
+mixin product-item(img, name, price)
+    li.item
+        div.img 
+            img(src=img, alt="link error")
+        div.des
+            span.name-product= name 
+            .rating-box 
+                span.rating
+            span.price= price 
+
+
+mixin product-sale(img, name, price_new, price_old, span_text)
+    li.item.col-12.col-md-6.col-lg-4
+        div.wrapper
+            div.img 
+                img(src=img, alt="link error")
+                span&attributes(attributes)= span_text
+                div 
+                    button Mua ngay 
+                    a(href="#")
+                        i(class=search_product)
+            div.des
+                span.name-product= name 
+                .rating-box 
+                    span.rating
+                div.price 
+                    span.price-new= price_new 
+                    span.price-old= price_old
+
+mixin directional
+    li 
+        a(href="#")
+            i&attributes(attributes) 
