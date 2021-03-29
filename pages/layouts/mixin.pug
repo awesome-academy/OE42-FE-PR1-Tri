@@ -1,4 +1,5 @@
 include ../variables/variable_header
+include ../variables/variable_list_product
 
 mixin icon-contact
     li 
@@ -29,16 +30,14 @@ mixin menu(name)
                     +submenu(item_sub)
     else if name == "Trang Chủ"
         li.nav-item 
-            a.nav-link.active(href="#")= name
+            a.nav-link.active(href="list-products.html")= name
     else
         li.nav-item 
             a.nav-link(href="#")= name 
     
-
 mixin submenu(submenu_name)
      li
-        a.dropdown-item(href="#")= submenu_name
-
+        a.dropdown-item(href="/list-products.html")= submenu_name
 
 mixin info(name)
     li 
@@ -50,7 +49,6 @@ mixin general_info(name)
     li 
         a(href="#")= name 
 
-
 mixin data_slide(str_number)
     li(data-target="#carouselExampleIndicators", data-slide-to=str_number)&attributes(attributes)
 
@@ -61,3 +59,99 @@ mixin carousel-item(img)
             h1 Green Shop
             h5 Cho thuê cây cảnh tết 2016
             p (Miễn phí vận chuyển với những đơn hàng có giá trị trên 5.000.000đ)
+
+mixin product-item(img, name, price)
+    li.item
+        div.img 
+            img(src=img, alt="link error")
+        div.des
+            span.name-product= name 
+            .rating-box 
+                span.rating
+            span.price= price 
+
+mixin product-sale(img, name, price_new, price_old, span_text)
+    li.item.col-12.col-sm-6.col-lg-4
+        div.wrapper
+            div.img 
+                img(src=img, alt="link error")
+                span&attributes(attributes)= span_text
+                div 
+                    button Mua ngay 
+                    a(href="/detail-product.html")
+                        i(class=search_product)
+            div.des
+                span.name-product= name 
+                .rating-box 
+                    span.rating
+                div.price 
+                    span.price-new= price_new 
+                    span.price-old= price_old
+
+mixin directional
+    li 
+        a(href="#")
+            i&attributes(attributes) 
+
+mixin new-product(img, name, price_new, price_old, span_text)
+    li.item.col-12.col-sm-6.col-lg-4.col-xl-3
+        div.wrapper
+            div.img 
+                img(src=img, alt="link error")
+                span&attributes(attributes)= span_text
+                div 
+                    button Mua ngay 
+                    a(href="/detail-product.html")
+                        i(class=search_product)
+            div.des
+                span.name-product= name 
+                .rating-box 
+                    span.rating
+                div.price 
+                    span.price-new= price_new 
+                    span.price-old= price_old
+
+mixin news-homepage(img, date, title, text)
+    li.col-12.col-md-4.news-item 
+        .wrapper 
+            img(src=img, alt="link error")
+            span.date= date 
+            h5.title= title 
+            p.text= text 
+            a(href="#") Đọc tiếp 
+
+mixin list-items(name)
+    li.item 
+        i(class=icon_list)
+        a(href="#")= name 
+
+mixin list-color(name)
+    li.item-color 
+        span&attributes(attributes)
+        a(href="#")= name  
+
+mixin change-view-icon  
+    li 
+        label(for="check")
+            i&attributes(attributes) 
+
+mixin change_page(stt)
+    li 
+        a(href="#")&attributes(attributes)= stt
+
+mixin list_view(img, name, des, price)
+    li.list-item 
+        .img 
+            img(src=img, alt="link error")
+        .description 
+            h5.name= name 
+            .rating-box 
+                span.rating
+            p.des= des 
+            span.price= price 
+            .choose 
+                button(type="button") Mua ngay
+                a(href="/detail-product.html")
+                    i(class=search_product)
+                a(href="#")
+                    i(class=heart_product)
