@@ -1,0 +1,47 @@
+.section__news-homepage {
+    margin-bottom: convertRem(50);
+
+    .news-homepage {
+        margin-top: convertRem(45);
+
+        .news-item {
+            img {
+                width: 100%;
+                height: convertRem(200);
+            }
+
+            .date {
+                font-size: 0.85rem;
+                font-style: italic;
+                color: $color-gray;
+                line-height: 3.5;
+            }
+
+            .title {
+                font-size: 0.9rem;
+                color: $color-green;
+                text-transform: capitalize;
+                line-height: 1.5;
+                font-weight: 600;
+            }
+
+            .text {
+                font-size: 0.85rem;
+                color: $color-gray;
+                line-height: 1.8;
+            }
+
+            a {
+                font-size: 0.75rem;
+                color: $color-green;
+                font-style: italic;
+                @include transition-ease-in-out;
+                font-size: 0.85rem;
+
+                &:hover {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+}
