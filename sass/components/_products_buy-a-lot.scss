@@ -1,0 +1,59 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+
+.section__products-general {
+
+    .products-buy-a-lot {
+        .product-items {
+            li {
+                padding: convertRem(23.6) convertRem(25);
+                display: flex;
+                border: 1px solid $color-border-product;
+                border-bottom: 0;
+
+                &:last-child {
+                    border-bottom: 1px solid $color-border-product;
+                }
+
+                .img {
+                    width: convertRem(75);
+                    height: convertRem(75);
+                    margin-right: 0.75rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .des {
+                    .name-product {
+                        font-size: 0.9rem;
+                    }
+
+                    .rating-box {
+                        width: 68px;
+                        height: 11px;
+                        overflow: hidden;
+                        background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll;
+                        margin: 0.25rem 0;
+
+                        .rating {
+                            height: 100%;
+                            background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll 0 100%;
+                            width: 93%;
+                            display: block;
+                        }
+
+                    }
+
+                    .price {
+                        color: $color-red;
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
+    }
+}

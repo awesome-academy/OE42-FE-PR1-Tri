@@ -1,0 +1,54 @@
+#main__list-product {
+    .section__list-product-content {
+        margin-bottom: convertRem(155);
+
+        .title {
+            position: relative;
+            margin-bottom: 1.5rem;
+
+            span {
+                color: $color-green;
+                border-bottom: 2px solid #3fb871;
+                font-weight: 600;
+                padding: 0.625rem 0;
+            }
+
+            &::after {
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                content: " ";
+                background: $color-border-product;
+                top: 33px;
+                left: 0;
+            }
+        }
+
+        .list-items {
+            margin-bottom: convertRem(40);
+
+            ul {
+                li {
+                    padding: convertRem(10) 0;
+                    border-bottom: 1px solid $color-border-product;
+
+                    i {
+                        color: $color-gray;
+                        font-size: 0.85rem;
+                        margin-right: 0.25rem;
+                    }
+
+                    a {
+                        color: $color-gray;
+                        font-size: 0.85rem;
+                        @include transition-ease-in-out;
+
+                        &:hover {
+                            color: $color-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

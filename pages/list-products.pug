@@ -1,0 +1,77 @@
+extend ./layouts/layout
+block title 
+    title Danh sách sản phẩm
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main 
+    include ./variables/variable_links
+    include ./variables/variable_list_product
+    main#main__list-product
+        section.section__list-product-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Danh sách sản phẩm  
+        section.section__list-product-content 
+            .container 
+                .row 
+                    .col-12.col-md-4.col-lg-3 
+                        .list-product.list-items
+                            .title
+                                span Danh mục sản phẩm
+                            ul
+                                each item in list_products
+                                    +list-items(item)
+                        .search-by-price.list-items
+                            .title
+                                span Tìm theo giá
+                            ul
+                                each price in search_by_price
+                                    +list-items(price)
+                        .search-by-color 
+                            .title 
+                                span Tìm theo màu
+                            ul
+                                each color in search_by_color
+                                    - const {classes, name} = color
+                                        +list-color(name)(class=classes)
+                    .col-12.col-md-8.col-lg-9 
+                        .panner
+                            img(src=`${link_images}/panner-list-product.jpg`, alt="panner-list-product")
+                        .view-product
+                            input(type="checkbox" id="check")
+                            .change-view-product 
+                                ul.list-icon 
+                                    each icon in icon_view
+                                        +change-view-icon(class=icon) 
+                                ul.sort-item 
+                                    li 
+                                        label(for="name-product") Sắp xếp theo 
+                                        select#name-product(name="") 
+                                            option(value="0") Tên sản phẩm 
+                                            each product in list_products
+                                                option(value=`${product}`)= product 
+                                    li 
+                                        label(for="show-product") Show 
+                                        select#show-product(name="") 
+                                            option(value="0") 5
+                                            option(value="1") 10
+                                            option(value="2") 15
+                            .view-list-grid 
+                                .view-grid
+                                    ul.row.grid 
+                                        each item in grid_view
+                                            - const {img, name, price_new, price_old, span_class, span_text} = item 
+                                                +product-sale(img, name, price_new, price_old, span_text)(class=span_class)
+                                .view-list
+                                    ul.list
+                                        each item in list_view 
+                                            - const {img, name, des, price} = item 
+                                                +list_view(img, name, des, price)
+                            .change-page 
+                                ul
+                                    each stt in change_page
+                                        if stt == "1"
+                                            +change_page(stt)(class="active")
+                                        else 
+                                            +change_page(stt)
