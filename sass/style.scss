@@ -1,7 +1,11 @@
+@import './partials/fonts';
 @import './partials/reset';
 @import './partials/variables';
 @import './partials/mixins';
 @import './layouts/header';
 @import './components/slide';
 @import './components/hot-products';
+@import './components/products_buy-a-lot';
+@import './components/sale-products';
+@import './components/banner';
 @import './layouts/footer';
