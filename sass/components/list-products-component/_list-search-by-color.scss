@@ -1,0 +1,56 @@
+#main__list-product {
+    .section__list-product-content {
+        .search-by-color {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    margin: convertRem(14) 0;
+
+                    span {
+                        @include circle(25);
+                        margin-right: 0.5rem;
+
+                        &.green {
+                            background: rgb(35, 240, 69);
+                        }
+
+                        &.red {
+                            background: rgb(228, 53, 9);
+                        }
+
+                        &.purple {
+                            background: rgb(235, 33, 201);
+                        }
+
+                        &.blue {
+                            background: rgb(47, 142, 250);
+                        }
+
+                        &.yellow {
+                            background: rgb(228, 241, 36);
+                        }
+
+                        &.pink {
+                            background: rgb(241, 32, 102);
+                        }
+                    }
+
+                    a {
+                        font-size: 0.85rem;
+                        color: $color-gray;
+                        @include transition-ease-in-out;
+
+                        &:hover {
+                            color: $color-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
