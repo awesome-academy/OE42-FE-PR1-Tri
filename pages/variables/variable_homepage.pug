@@ -1,4 +1,185 @@
 include variable_links
 - var data_slides = ["0","1","2"]
 - var image_slides = [`${link_images}/slide_1.jpg`,`${link_images}/slide_2.jpg`,`${link_images}/slide_3.jpg`]
+
 - var search_product = "fas fa-search"
+
+
+- 
+    var product_items = [
+        {
+            img: `${link_images}/spx2-13.png`,
+            name: 'Cây chân chim',
+            price: '250.000đ'
+        },
+        {
+            img: `${link_images}/spx2-9.png`,
+            name: 'Cây dạ lam',
+            price: '150.000đ'
+        },
+        {
+            img: `${link_images}/spx2-15.png`,
+            name: 'Cây danh dự',
+            price: '450.000đ'
+        },
+        {
+            img: `${link_images}/spx2-12.png`,
+            name: 'Cây đa búp đỏ',
+            price: '200.000đ'
+        },
+        {
+            img: `${link_images}/spx2-5.png`,
+            name: 'Cây cọ ta',
+            price: '300.000đ'
+        },  
+        {
+            img: `${link_images}/spx2-1.png`,
+            name: 'Cây dứa nhỏ',
+            price: '275.000đ'
+        }
+
+    ]
+
+- 
+    var product_sales = [
+        {
+            img: `${link_images}/spx2-15.png`,
+            name: 'Cây danh dự',
+            price_new: '475.000đ',
+            price_old: '250.000đ',
+            span_class: 'sale',
+            span_text: '-25%'
+        },
+        {
+            img: `${link_images}/spx2-12.png`,
+            name: 'Cây dứa nhỏ',
+            price_new: '475.000đ',
+            price_old: '250.000đ',
+            span_class: 'sale',
+            span_text: '-10%'
+        },
+        {
+            img: `${link_images}/spx2-11.png`,
+            name: 'Cây cọ ta',
+            price_new: '770.000đ',
+            price_old: '250.000đ',
+            span_class: 'none',
+            span_text: ''
+        }, 
+        {
+            img: `${link_images}/spx2-2.png`,
+            name: 'Cây dạ lam',
+            price_new: '555.000đ',
+            price_old: '250.000đ',
+            span_class: 'none',
+            span_text: ''
+        }, 
+        {
+            img: `${link_images}/spx2-8.png`,
+            name: 'Cây danh dự',
+            price_new: '780.000đ',
+            price_old: '250.000đ',
+            span_class: 'none',
+            span_text: ''
+        },
+        {
+            img: `${link_images}/spx2-6.png`,
+            name: 'Cây dứa nhỏ',
+            price_new: '680.000đ',
+            price_old: '250.000đ',
+            span_class: 'none',
+            span_text: ''
+        }
+    ]
+
+- var directional = ["fas fa-angle-left", "fas fa-angle-right"]
+
+- 
+    var new_products = [
+        {
+            img_2: `${link_images}/spx2-15.png`,
+            name_2: 'Cây danh dự',
+            price_new_2: '250.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'new',
+            span_text_2: 'New'
+        },
+        {
+            img_2: `${link_images}/spx2-7.png`,
+            name_2: 'Cây xương rồng',
+            price_new_2: '250.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        },
+        {
+            img_2: `${link_images}/spx2-12.png`,
+            name_2: 'Cây dạ lam',
+            price_new_2: '250.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        }, 
+        {
+            img_2: `${link_images}/spx2-11.png`,
+            name_2: 'Cây dứa nhỏ',
+            price_new_2: '250.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        }, 
+        {
+            img_2: `${link_images}/spx2-8.png`,
+            name_2: 'Cây danh dự',
+            price_new_2: '680.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        },
+        {
+            img_2: `${link_images}/spx2-5.png`,
+            name_2: 'Cây xương rồng',
+            price_new_2: '880.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        },
+        {
+            img_2: `${link_images}/spx2-2.png`,
+            name_2: 'Cây chân chim',
+            price_new_2: '750.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        },
+        {
+            img_2: `${link_images}/spx2-14.png`,
+            name_2: 'Cây đa búp đỏ',
+            price_new_2: '150.000đ',
+            price_old_2: '250.000đ',
+            span_class_2: 'none',
+            span_text_2: ''
+        }
+    ]
+
+- 
+    var news_homepage = [
+        {
+            img: `${link_images}/news-homepage-1.jpg`,
+            date: 'Thứ 7, ngày 31, tháng 12 năm 2015',
+            title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
+            text: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé! Kết hợp hàng rào'
+        },
+        {
+            img: `${link_images}/news-homepage-2.jpg`,
+            date: 'Thứ 7, ngày 31, tháng 12 năm 2015',
+            title: 'Tạo tiểu cảnh góc sân cho nhà phố, biệt thự đẹp',
+            text: 'Khi bước từ ngoài ngõ vào hay từ trong nhà đi ra, góc sân luôn là điểm nhìn đầu tiên của chúng ta'
+        },
+        {
+            img: `${link_images}/news-homepage-3.jpg`,
+            date: 'Thứ 7, ngày 31, tháng 12 năm 2015',
+            title: 'Cách bố trí hoa chậu trước cửa ấn tượng',
+            text: 'Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa'
+        }
+    ] 
