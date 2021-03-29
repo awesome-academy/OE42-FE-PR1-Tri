@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Danh sách sản phẩm</title>
+    <title>Tin tức</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
@@ -91,144 +91,100 @@
         </div>
       </nav>
     </header>
-    <main id="main__detail-product">
-      <section class="section__detail-product-header">
-        <div class="container"> <a class="home" href="#">Home </a><span></span><a class="list" href="#">Cây dạ lam</a></div>
+    <main id="main__news">
+      <section class="section__news-header">
+        <div class="container"> <a class="home" href="#">Home </a><span></span><a class="list" href="#">Tin tức</a></div>
       </section>
-      <section class="section__detail-product-content"> 
+      <section class="section__news-content"> 
         <div class="container"> 
-          <div class="row detail-product"> 
-            <div class="col-12 col-md-5"> 
-              <div class="img"> <img src="./assets/images/spx2-15.png"/></div>
-            </div>
-            <div class="col-12 col-md-7"> 
-              <div class="product-header">
-                <h5 class="name">Cây dạ lam</h5>
-                <div class="rating-box"> <span class="rating"></span></div>
-                <div class="price"> <span class="price-new">4.099.000 đ</span><span class="price-old">4.099.000 đ</span></div>
-              </div>
-              <div class="product-des"> 
-                <p class="text">Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8m - 1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15 - 20m. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rộng để lại các khía màu nâu nhạt</p>
-              </div>
-              <div class="count"> <span>Số lượng </span>
-                <ul> 
-                  <li> <a href="#">-</a></li>
-                  <li> 
-                    <input type="text" value="1"/>
-                  </li>
-                  <li> <a href="#">+ </a></li>
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-3"> 
+              <div class="list-product">
+                <div class="title"><span>Danh mục sản phẩm</span></div>
+                <ul>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây chậu treo (10)</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây cỏ hoa (5)</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây dây leo</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây để bàn</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây may mắn</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây trang trí</a></li>
+                  <li class="item"> <i class="fas fa-angle-right"></i><a href="#">Cây nội thất</a></li>
                 </ul>
               </div>
-              <div class="choose"> 
-                <button type="button">Mua ngay</button><a href="/detail-product.html"><i class="fas fa-search"></i></a><a href="#"><i class="fas fa-heart"></i></a>
+              <div class="featured-news-list"> 
+                <div class="title"> <span>Tin tức nổi bật </span></div>
+                <ul>
+                  <li> <a href="detailed-news.html">
+                      <div class="img"><img src="./assets/images/featured-news-1.jpg" alt="link error"/></div>
+                      <p class="text">Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách</p></a></li>
+                  <li> <a href="detailed-news.html">
+                      <div class="img"><img src="./assets/images/featured-news-2.jpg" alt="link error"/></div>
+                      <p class="text">Những sai lầm nên tránh khi bố trí cây xanh trong nhà</p></a></li>
+                  <li> <a href="detailed-news.html">
+                      <div class="img"><img src="./assets/images/featured-news-3.jpg" alt="link error"/></div>
+                      <p class="text">7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng</p></a></li>
+                  <li> <a href="detailed-news.html">
+                      <div class="img"><img src="./assets/images/featured-news-4.jpg" alt="link error"/></div>
+                      <p class="text">Hướng dẫn lựa chọn cây cảnh trang trí trong văn phòng</p></a></li>
+                  <li> <a href="detailed-news.html">
+                      <div class="img"><img src="./assets/images/featured-news-5.jpg" alt="link error"/></div>
+                      <p class="text">4 loại cây cảnh thích hợp bày trí ở khu vực đại sảnh</p></a></li>
+                </ul>
               </div>
-              <div class="contact"> 
-                <ul class="icon-contact"> 
-                  <li> <a class="like" href="#"><i class="fab fa-facebook-square"></i>Like </a><span>0</span></li>
-                  <li> <a class="twitter" href="#"><i class="fab fa-twitter"></i>Twitter </a></li>
-                  <li><a class="google-plus" href="#"><i class="fab fa-google-plus-square"></i></a><span>0</span></li>
-                  <li><a class="share" href="#"><i class="fas fa-plus-square"></i>Share </a></li>
+              <div class="blog-tag"> 
+                <div class="title"> <span>Blog tag</span></div>
+                <ul>
+                  <li> <a href="#">Cây văn phòng</a></li>
+                  <li> <a href="#">Cây phát lộc</a></li>
+                  <li> <a href="#">Cây xanh</a></li>
+                  <li> <a href="#">Cây trang trí</a></li>
+                  <li> <a href="#">Cây</a></li>
+                  <li> <a href="#">Plants</a></li>
+                  <li> <a href="#">Sức khỏe</a></li>
+                  <li> <a href="#">Quà tặng</a></li>
+                  <li> <a href="#">Lưu niệm</a></li>
                 </ul>
               </div>
             </div>
-            <div class="col-12 col-md-5 product_care">
-              <ul> 
-                <li class="img"> <img src="./assets/images/spx2-2.png" alt="link error"/></li>
-                <li class="img"> <img src="./assets/images/spx2-5.png" alt="link error"/></li>
-                <li class="img"> <img src="./assets/images/spx2-6.png" alt="link error"/></li>
-                <li class="img"> <img src="./assets/images/spx2-7.png" alt="link error"/></li>
-                <li class="img"> <img src="./assets/images/spx2-8.png" alt="link error"/></li>
+            <div class="col-12 col-md-8 col-lg-9 news-description"> 
+              <ul>
+                <li><a href="detailed-news.html"> 
+                    <h5>Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên</h5></a>
+                  <div class="icon"><span class="date"> <i class="far fa-calendar-minus"></i>20/12/2015</span><span class="time"> <i class="far fa-clock"></i>11:20:00 AM</span><span class="comment"> <a href="#"><i class="fad fa-comment-dots"></i>0 Bình luận</a></span></div>
+                  <div class="img"> <img src="./assets/images/featured-news-content-1.jpg" alt="link error"/></div>
+                  <div class="text"> 
+                    <p>Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!</p>
+                  </div>
+                </li>
+                <li><a href="detailed-news.html"> 
+                    <h5>Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách</h5></a>
+                  <div class="icon"><span class="date"> <i class="far fa-calendar-minus"></i>20/12/2015</span><span class="time"> <i class="far fa-clock"></i>11:20:00 AM</span><span class="comment"> <a href="#"><i class="fad fa-comment-dots"></i>0 Bình luận</a></span></div>
+                  <div class="img"> <img src="./assets/images/featured-news-content-2.jpg" alt="link error"/></div>
+                  <div class="text"> 
+                    <p>Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!</p>
+                  </div>
+                </li>
+                <li><a href="detailed-news.html"> 
+                    <h5>7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng</h5></a>
+                  <div class="icon"><span class="date"> <i class="far fa-calendar-minus"></i>20/12/2015</span><span class="time"> <i class="far fa-clock"></i>11:20:00 AM</span><span class="comment"> <a href="#"><i class="fad fa-comment-dots"></i>0 Bình luận</a></span></div>
+                  <div class="img"> <img src="./assets/images/featured-news-content-3.jpg" alt="link error"/></div>
+                  <div class="text"> 
+                    <p>Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!</p>
+                  </div>
+                </li>
               </ul>
-            </div>
-          </div>
-          <div class="info-evaluate-product"> 
-            <ul class="items"> 
-              <li><a class="active" href="#">Thông tin sản phẩm</a></li>
-              <li> <a href="#">Khách hàng đánh giá</a></li>
-              <li><a href="#">Thẻ tag</a></li>
-            </ul>
-            <div class="content">
-              <p>Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn </p>
-              <p>Tên khoa học: Calathea zebrina</p>
-              <p>Họ thực vật: Marantaceae (Củ dong)</p>
-              <p>Chiều cao 0,8 - 1,2m</p>
-              <p>Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam </p>
-              <div class="des"> 
-                <p>
-                  Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8 - 1,2m.Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. 
-                  Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
-                </p>
-                <p>Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh.</p>
-                <p>Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất - văn phòng </p>
-                <p>
-                  Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt.Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình</p>
+              <div class="change-page"> 
+                <ul>
+                  <li> <a href="#">Trang trước</a></li>
+                  <li> <a class="active" href="#">1</a></li>
+                  <li> <a href="#">2</a></li>
+                  <li> <a href="#">3</a></li>
+                  <li> <a href="#">4</a></li>
+                  <li> <a href="#">Trang cuối</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section__similar-product">
-        <div class="container">
-          <div class="product-categories"> <span>Sản phẩm cùng loại</span>
-            <ul class="directional">
-              <li> <a href="#"><i class="fas fa-angle-left"> </i></a></li>
-              <li> <a href="#"><i class="fas fa-angle-right"> </i></a></li>
-            </ul>
-          </div>
-          <ul class="similar-product-item row">
-            <li class="item col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="wrapper">
-                <div class="img"> <img src="./assets/images/spx2-11.png" alt="link error"/><span class="none"></span>
-                  <div> 
-                    <button>Mua ngay </button><a href="/detail-product.html"><i class="fas fa-search"></i></a>
-                  </div>
-                </div>
-                <div class="des"><span class="name-product">Cây cọ nhật</span>
-                  <div class="rating-box"> <span class="rating"></span></div>
-                  <div class="price"> <span class="price-new">250.000đ</span><span class="price-old">250.000đ</span></div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="wrapper">
-                <div class="img"> <img src="./assets/images/spx2-1.png" alt="link error"/><span class="none">0</span>
-                  <div> 
-                    <button>Mua ngay </button><a href="/detail-product.html"><i class="fas fa-search"></i></a>
-                  </div>
-                </div>
-                <div class="des"><span class="name-product">Cây hồng môn</span>
-                  <div class="rating-box"> <span class="rating"></span></div>
-                  <div class="price"> <span class="price-new">250.000đ</span><span class="price-old">250.000đ</span></div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="wrapper">
-                <div class="img"> <img src="./assets/images/spx2-8.png" alt="link error"/><span class="none"></span>
-                  <div> 
-                    <button>Mua ngay </button><a href="/detail-product.html"><i class="fas fa-search"></i></a>
-                  </div>
-                </div>
-                <div class="des"><span class="name-product">Cây phát lộc</span>
-                  <div class="rating-box"> <span class="rating"></span></div>
-                  <div class="price"> <span class="price-new">250.000đ</span><span class="price-old">250.000đ</span></div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-12 col-sm-6 col-lg-4 col-xl-3">
-              <div class="wrapper">
-                <div class="img"> <img src="./assets/images/spx2-12.png" alt="link error"/><span class="none"></span>
-                  <div> 
-                    <button>Mua ngay </button><a href="/detail-product.html"><i class="fas fa-search"></i></a>
-                  </div>
-                </div>
-                <div class="des"><span class="name-product">Cây kim ngân</span>
-                  <div class="rating-box"> <span class="rating"></span></div>
-                  <div class="price"> <span class="price-new">250.000đ</span><span class="price-old">250.000đ</span></div>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </section>
     </main>

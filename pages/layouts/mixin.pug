@@ -1,5 +1,6 @@
 include ../variables/variable_header
 include ../variables/variable_list_product
+include ../variables/variable_newspage
 
 mixin icon-contact
     li 
@@ -23,7 +24,7 @@ mixin menu(name)
                 each item_sub in nav_products
                     +submenu(item_sub)
     else if name == "Sản Phẩm Mới"
-         li.nav-item.dropdown 
+        li.nav-item.dropdown 
             a.nav-link.dropdown-toggle(href="#",id="submenu_2", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")= name 
             ul.dropdown-menu(aria-labelledby="submenu_2")
                 each item_sub in nav_new_Products
@@ -31,7 +32,13 @@ mixin menu(name)
     else if name == "Trang Chủ"
         li.nav-item 
             a.nav-link.active(href="index.html")= name
-    else
+    else if name == "Tin Tức"
+        li.nav-item 
+            a.nav-link(href="news-page.html")= name 
+    else if name == "Liên Hệ"
+        li.nav-item 
+            a.nav-link(href="contact-page.html")= name 
+    else 
         li.nav-item 
             a.nav-link(href="#")= name 
     
@@ -168,3 +175,37 @@ mixin cart_item(img, name, unit_price, count, into_money)
         td.delete
             a(href="#")
                 i&attributes(attributes)
+<<<<<<< HEAD
+=======
+
+mixin featured_news(img, text)
+    li 
+        a(href="detailed-news.html")
+            .img
+                img(src=img, alt="link error")
+            p.text= text 
+
+mixin blog_tag(name)
+    li 
+        a(href="#")= name 
+
+mixin news_list(title, date, time, comment, img, text)
+    li
+        a(href="detailed-news.html") 
+            h5= title 
+        .icon
+            span.date 
+                i(class=icon_date)
+                | #{date}
+            span.time 
+                i(class=icon_time)
+                | #{time}
+            span.comment 
+                a(href="#")
+                    i(class=icon_comment)
+                    | #{comment}
+        .img 
+            img(src=img, alt="link error")
+        .text 
+            p= text
+>>>>>>> 31672e0... task-15
