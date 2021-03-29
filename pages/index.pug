@@ -120,3 +120,48 @@ block main
                                 .price 
                                     span.price-new 250.000 đ
                                     span.price-old 250.000 đ
+        section.section__products-general
+            .container
+                .row 
+                    .col-12.col-md-4.col-lg-3.products-buy-a-lot
+                        .product-categories 
+                            span Sản phẩm mua nhiều
+                        ul.product-items 
+                            each item in product_items
+                                - const {img, name, price} = item
+                                    +product-item(img, name, price) 
+                    .col-12.col-md-8.col-lg-9.products-sale
+                        .product-categories 
+                            span Sản phẩm khuyến mãi
+                            ul.directional
+                                each dir in directional
+                                    +directional(class=dir) 
+
+                        ul.product-items-sale.row
+                            each item in product_sales
+                                - const {img, name, price_new, price_old, span_class, span_text} = item 
+                                    +product-sale(img, name, price_new, price_old, span_text)(class=span_class)
+        section.section__panner 
+            .container
+                img(src=`${link_images}/panner-home.png`, alt="panner")
+        section.section__new-products
+            .container 
+                .product-categories 
+                    span Sản phẩm mới
+                    ul.directional
+                        each dir in directional
+                            +directional(class=dir)
+                ul.new-products-item.row
+                    each item_2 in new_products
+                        - const {img_2, name_2, price_new_2, price_old_2, span_class_2, span_text_2} = item_2 
+                            +new-product(img_2, name_2, price_new_2, price_old_2, span_text_2)(class=span_class_2)
+        section.section__news-homepage 
+            .container 
+                .product-categories 
+                    span Tin tức
+                ul.news-homepage.row
+                    each item in news_homepage
+                        - const {img, date, title, text} = item 
+                            +news-homepage(img, date, title, text)
+
+        
