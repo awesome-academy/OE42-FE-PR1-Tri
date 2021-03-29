@@ -120,3 +120,26 @@ block main
                                 .price 
                                     span.price-new 250.000 đ
                                     span.price-old 250.000 đ
+        section.section__products-general
+            .container
+                .row 
+                    .col-12.col-md-3.products-buy-a-lot
+                        .product-categories 
+                            span Sản phẩm mua nhiều
+                        ul.product-items 
+                            each item in product_items
+                                - const {img, name, price} = item
+                                    +product-item(img, name, price) 
+                    .col-12.col-md-9.products-sale
+                        .product-categories 
+                            span Sản phẩm khuyến mãi
+                            ul.directional
+                                each dir in directional
+                                    +directional(class=dir) 
+
+                        ul.product-items-sale.row
+                            each item in product_sales
+                                - const {img, name, price_new, price_old, span_class, span_text} = item 
+                                    +product-sale(img, name, price_new, price_old, span_text)(class=span_class)
+
+
