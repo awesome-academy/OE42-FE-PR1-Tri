@@ -1,0 +1,43 @@
+extend ./layouts/layout
+block title 
+    title Danh sách sản phẩm
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main 
+    include ./variables/variable_links
+    include ./variables/variable_cart 
+    main#main__cart-product
+        section.section__cart-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Giỏ hàng
+        section.section__cart-content 
+            .container
+                h4.cart-header Giỏ Hàng 
+                .cart-content 
+                    table.info-cart-table
+                        thead  
+                            tr 
+                                each item_th in table_th
+                                    - const {classes, name} = item_th
+                                    th(class=classes)= name 
+                        tbody 
+                            each item in table_td
+                                - const {img, name, unit_price, count, into_money} = item 
+                                    +cart_item(img, name, unit_price, count, into_money)(class=icon_delete)
+                    .button
+                        button.cancel-order(type="button") Hủy đơn hàng 
+                        button.continue-buy(type="button") Tiếp tục mua
+                    .table-price 
+                        table 
+                            tr 
+                                td Tổng tiền (Chưa thuế) 
+                                td 270.000 đ
+                            tr 
+                                td Thuế (VAT 10%)
+                                td 27.000 đ
+                            tr 
+                                td Tổng phải thanh toán
+                                td 297.000 đ
+                        button Thanh toán

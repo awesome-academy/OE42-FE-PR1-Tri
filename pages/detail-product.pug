@@ -89,3 +89,14 @@ block main
                             p Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất - văn phòng 
                             p Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt.
                                 | Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình
+        section.section__similar-product
+            .container
+                .product-categories 
+                    span Sản phẩm cùng loại
+                    ul.directional
+                        each dir in directional
+                            +directional(class=dir)
+                ul.similar-product-item.row
+                    each item in similar_products
+                        - const {img, name, price_new, price_old, span_class, span_text} = item
+                            +new-product(img, name, price_new, price_old, span_text)(class=span_class)
