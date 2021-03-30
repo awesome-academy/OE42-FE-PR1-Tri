@@ -24,7 +24,7 @@ header.header
                     .header__logo 
                         .logo  
                             h1 
-                                a(href="#") Green
+                                a(href="/index.html") Green
                                     span Shop
                             span Món quà từ thiên nhiên
                         .img 
@@ -40,8 +40,7 @@ header.header
                             form( method="post") 
                                 input(type="text" placeholder="Tìm kiếm...")
                                 button(type="submit")
-                                    i(class=search)
-                            
+                                    i(class=search)                        
                     .header__cart            
                         a(href="") 
                             i(class=shopping_cart)
@@ -54,4 +53,3 @@ header.header
                 ul.navbar-nav
                     each item in nav_links
                         +menu(item)
-    
