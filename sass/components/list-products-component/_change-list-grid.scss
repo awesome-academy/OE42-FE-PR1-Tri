@@ -1,0 +1,358 @@
+#main__list-product {
+    .section__list-product-content {
+        .view-product {
+            #check {
+                display: none;
+            }
+
+            .change-view-product {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.75rem;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        label {
+                            margin: 0 1rem 0 0;
+                        }
+
+                        select {
+                            border: 1px solid $color-border-product;
+                            color: $color-gray;
+                            padding: 0.75rem 0 0.75rem 0.875rem;
+                            font-size: 0.8375rem;
+                            outline-color: $color-green;
+                        }
+                    }
+
+                    &.list-icon {
+                        li {
+                            i {
+                                font-size: 1.125rem;
+                                cursor: pointer;
+                            }
+
+                            &:first-child {
+                                color: $color-green;
+                            }
+
+                            &:last-child {
+                                color: $color-gray;
+                            }
+                        }
+                    }
+
+                    &.sort-item {
+                        li {
+                            &:first-child {
+                                margin-right: convertRem(40);
+                            }
+
+                            label {
+                                font-size: 0.95rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .view-list-grid {
+                .view-grid {
+                    display: block;
+
+                    ul {
+                        .item {
+                            margin-bottom: convertRem(30);
+
+                            .wrapper {
+                                width: 100%;
+                                border: 1px solid $color-border-product;
+                                border-radius: 5px;
+
+                                .img {
+                                    width: 100%;
+                                    height: convertRem(220);
+                                    position: relative;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+
+                                    span {
+                                        position: absolute;
+                                        left: 20px;
+                                        top: 20px;
+                                        @include circle(60);
+                                        color: $color-white;
+                                        @include flexCenter(row);
+                                        text-transform: uppercase;
+                                        font-size: 0.85rem;
+
+                                        &.new {
+                                            background: $color-green;
+                                        }
+
+                                        &.sale {
+                                            background: $color-red;
+                                        }
+
+                                        &.none {
+                                            display: none;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        div {
+                                            transform: scale(1);
+                                        }
+                                    }
+
+                                    div {
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        @include flexCenter(row);
+                                        top: 0;
+                                        transform: scale(0);
+                                        background: $color-border-product;
+                                        @include transition-ease-in-out;
+
+                                        button {
+                                            text-transform: uppercase;
+                                            padding: convertRem(10) convertRem(35);
+                                            color: $color-white;
+                                            background-color: $color-green;
+                                            border-radius: convertRem(30);
+                                            font-size: 0.85rem;
+                                            margin-right: convertRem(10);
+                                            height: convertRem(45);
+                                            @include transition-ease-in-out;
+
+                                            &:hover {
+                                                background: $color-dark-green;
+                                            }
+                                        }
+
+                                        a {
+                                            @include circle(45);
+                                            background: $color-white;
+                                            @include flexCenter(row);
+                                            @include transition-ease-in-out;
+
+                                            i {
+                                                font-size: 0.75rem;
+                                            }
+
+                                            &:hover {
+                                                color: $color-green;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .des {
+                                    margin: 1.5rem 0;
+                                    text-align: center;
+
+                                    .name-product {
+                                        font-size: 1.125rem;
+                                        line-height: 2;
+                                        color: $color-text-product;
+                                    }
+
+                                    .rating-box {
+                                        width: 68px;
+                                        height: 11px;
+                                        overflow: hidden;
+                                        background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll;
+                                        margin: 0.25rem auto;
+
+                                        .rating {
+                                            height: 100%;
+                                            background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll 0 100%;
+                                            width: 93%;
+                                            display: block;
+                                        }
+
+                                    }
+
+                                    .price {
+                                        &-new {
+                                            font-size: 1.25rem;
+                                            color: $color-red;
+                                            margin-right: 1rem;
+                                        }
+
+                                        &-old {
+                                            color: $color-gray;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .view-list {
+                    display: none;
+
+                    .list {
+                        &-item {
+                            display: flex;
+                            border: 1px solid $color-border-product;
+                            margin-bottom: convertRem(30);
+                            border-radius: 5px;
+
+                            .img {
+
+                                img {
+                                    width: convertRem(230);
+                                    height: 100%;
+                                }
+                            }
+
+                            .description {
+                                padding: 1rem 2rem;
+
+                                .rating-box {
+                                    width: 68px;
+                                    height: 11px;
+                                    overflow: hidden;
+                                    background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll;
+                                    margin: 0.25rem 0;
+
+                                    .rating {
+                                        height: 100%;
+                                        background: url('../assets/images/bkg_rating_hover.png') repeat-x scroll 0 100%;
+                                        width: 100%;
+                                        display: block;
+                                    }
+
+                                }
+
+                                .des {
+                                    font-size: 0.8rem;
+                                    margin-top: 0.5rem;
+                                }
+
+                                .price {
+                                    font-size: 1.25rem;
+                                    color: $color-red;
+                                }
+
+                                .choose {
+                                    margin-top: 1rem;
+                                    display: flex;
+
+                                    button {
+                                        height: convertRem(45);
+                                        border-radius: 1.875rem;
+                                        width: convertRem(145);
+                                        background: $color-green;
+                                        color: $color-white;
+                                        @include transition-ease-in-out;
+                                        text-transform: uppercase;
+
+                                        &:hover {
+                                            background: $color-dark-green;
+                                        }
+                                    }
+
+                                    a {
+                                        @include circle(45);
+                                        background: $color-white;
+                                        @include flexCenter(row);
+                                        @include transition-ease-in-out;
+                                        border: 1px solid $color-border-product;
+                                        margin-left: 0.75rem;
+
+                                        i {
+                                            font-size: 0.8rem;
+                                        }
+
+                                        &:hover {
+                                            color: $color-green;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .change-page {
+                margin-top: convertRem(60);
+
+                ul {
+                    display: flex;
+                    float: right;
+
+                    li {
+                        margin-right: 0.625rem;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            @include transition-ease-in-out;
+                            padding: 0.625rem 1.125rem;
+                            font-size: 0.875rem;
+                            color: $color-gray;
+                            border: 1px solid $color-border-product;
+
+                            &.active {
+                                background: $color-green;
+                                border-color: $color-green;
+                                color: $color-white;
+                            }
+
+                            &:hover {
+                                @extend .active;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #check:checked~ {
+                .change-view-product {
+                    .list-icon {
+                        li {
+                            &:first-child {
+                                color: $color-gray;
+                            }
+
+                            &:last-child {
+                                color: $color-green;
+                            }
+                        }
+                    }
+                }
+
+                .view-list-grid {
+                    .view-grid {
+                        display: none;
+                    }
+
+                    .view-list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
