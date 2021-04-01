@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Giỏ hàng</title>
+    <title>Đăng Ký</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
@@ -91,80 +91,56 @@
         </div>
       </nav>
     </header>
-    <main id="main__cart-product">
-      <section class="section__cart-header">
-        <div class="container"> <a class="home" href="#">Home </a><span></span><a class="list" href="#">Giỏ hàng</a></div>
+    <main id="main__sign-up">
+      <section class="section__sign-up-header">
+        <div class="container"> <a class="home" href="#">Home </a><span></span><a class="list" href="#">Đăng ký</a></div>
       </section>
-      <section class="section__cart-content"> 
-        <div class="container">
-          <h4 class="cart-header">Giỏ Hàng </h4>
-          <div class="cart-content"> 
-            <table class="info-cart-table">
-              <thead> 
-                <tr> 
-                  <th class="img">Hình ảnh</th>
-                  <th class="name-product">Tên sản phẩm</th>
-                  <th class="unit-price">Đơn giá</th>
-                  <th class="count">Số lượng</th>
-                  <th class="into-money">Thành tiền</th>
-                  <th class="delete">Xóa</th>
-                </tr>
-              </thead>
-              <tbody> 
-                <tr>
-                  <td class="img"><img src="./assets/images/spx2-1.png" alt="link error"/></td>
-                  <td class="name-product">Cây văn phòng</td>
-                  <td class="unit-price">270.000 đ</td>
-                  <td class="count">
-                    <input type="text" value="1"/>
-                  </td>
-                  <td class="into-money">270.000 đ</td>
-                  <td class="delete"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                </tr>
-                <tr>
-                  <td class="img"><img src="./assets/images/spx2-7.png" alt="link error"/></td>
-                  <td class="name-product">Cây trang trí</td>
-                  <td class="unit-price">270.000 đ</td>
-                  <td class="count">
-                    <input type="text" value="1"/>
-                  </td>
-                  <td class="into-money">270.000 đ</td>
-                  <td class="delete"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                </tr>
-                <tr>
-                  <td class="img"><img src="./assets/images/spx2-10.png" alt="link error"/></td>
-                  <td class="name-product">Cây cỏ hoa</td>
-                  <td class="unit-price">270.000 đ</td>
-                  <td class="count">
-                    <input type="text" value="1"/>
-                  </td>
-                  <td class="into-money">270.000 đ</td>
-                  <td class="delete"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="button">
-              <button class="cancel-order" type="button">Hủy đơn hàng </button>
-              <button class="continue-buy" type="button">Tiếp tục mua</button>
+      <section class="section__sign-up-content"> 
+        <div class="container"> 
+          <form action="" method="POST">
+            <div class="personal-info">
+              <h5>Thông tin cá nhân</h5>
+              <div class="row"> 
+                <div class="col-12 col-md-6 item">
+                  <label for="name-sign-up">Họ và tên </label>
+                  <input type="text" id="name-sign-up"/>
+                </div>
+                <div class="col-12 col-md-6 item">
+                  <label for="phone-sign-up">Số ĐT </label>
+                  <input type="text" id="phone-sign-up"/>
+                </div>
+                <div class="col-12 col-md-6 item"> 
+                  <label for="email-sign-up">Địa chỉ email </label>
+                  <input type="text" id="email-sign-up"/>
+                </div>
+                <div class="col-12 col-md-6 item"> 
+                  <label for="web-sign-up">Website của bạn </label>
+                  <input type="text" id="web-sign-up"/>
+                </div>
+                <div class="col-12 col-md-12 item-checkbox">
+                  <input type="checkbox" id="check-sign-up"/>
+                  <label for="check-sign-up">Đăng ký nhận thông tin qua email</label>
+                </div>
+              </div>
             </div>
-            <div class="table-price"> 
-              <table> 
-                <tr> 
-                  <td>Tổng tiền (Chưa thuế) </td>
-                  <td>270.000 đ</td>
-                </tr>
-                <tr> 
-                  <td>Thuế (VAT 10%)</td>
-                  <td>27.000 đ</td>
-                </tr>
-                <tr> 
-                  <td>Tổng phải thanh toán</td>
-                  <td>297.000 đ</td>
-                </tr>
-              </table>
-              <button>Thanh toán</button>
+            <div class="account-info"> 
+              <h5>Thông tin tài khoản </h5>
+              <div class="row">
+                <div class="col-12 col-md-6 item">
+                  <label for="password-sign-up">Mật khẩu</label>
+                  <input type="password" id="password-sign-up"/>
+                </div>
+                <div class="col-12 col-md-6 item">
+                  <label for="confirm-password-sign-up">Nhập lại mật khẩu</label>
+                  <input type="password" id="confirm-password-sign-up"/>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="button"> 
+              <button class="back" type="button">Quay lại </button>
+              <button class="submit" type="submit">Đăng ký</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>

@@ -1,0 +1,147 @@
+#main__sign-up {
+    .section__sign-up-header {
+        padding: 0.75rem 0;
+        margin-bottom: convertRem(30);
+
+        a {
+            font-size: 0.825rem;
+            color: $color-gray;
+
+            &.list {
+                color: $color-green;
+                @include transition-ease-in-out;
+
+                &:hover {
+                    color: $color-dark-green;
+                }
+            }
+
+        }
+
+        span {
+            position: relative;
+            margin: 0 0.25rem;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: convertRem(13);
+                border-right: 1px solid $color-gray;
+                right: 0;
+                top: 5px;
+                transform: rotate(30deg);
+            }
+        }
+    }
+
+    .section__sign-up-content {
+        margin-bottom: convertRem(100);
+
+        .personal-info {
+            margin-bottom: convertRem(60);
+        }
+
+        .account-info {
+            margin-bottom: convertRem(20);
+        }
+
+        h5 {
+            text-transform: uppercase;
+            color: $color-green;
+            font-weight: 800;
+            font-size: 1.0625rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .item {
+            margin-bottom: 1.75rem;
+
+            &:nth-child(odd) {
+                padding-right: 30px;
+            }
+
+            &:nth-child(even) {
+                padding-left: 30px;
+            }
+
+            label {
+                position: relative;
+                font-family: $font-default;
+                font-size: 0.85rem;
+                color: $color-gray;
+
+                &::after {
+                    position: absolute;
+                    content: '\2736';
+                    color: $color-red;
+                    font-size: 0.625rem;
+                    right: -10px;
+                    top: -2px;
+                }
+            }
+
+            input {
+                width: 100%;
+                border: 1px solid $color-border-product;
+                height: convertRem(42);
+                color: $color-gray;
+                font-size: 0.85rem;
+                padding-left: 1.125rem;
+                @include transition-ease-in-out;
+
+                &:focus {
+                    border-color: $color-green;
+                }
+            }
+        }
+
+        .item-checkbox {
+            margin-top: 1.25rem;
+
+            label {
+                font-family: $font-default;
+                font-size: 0.85rem;
+                color: $color-gray;
+                margin: 0;
+                margin-left: 0.5rem;
+                transform: translateY(-2px);
+            }
+        }
+
+        .button {
+
+            button {
+                text-transform: uppercase;
+                width: convertRem(145);
+                height: convertRem(45);
+                border-radius: convertRem(30);
+                font-size: 0.85rem;
+                border: 1px solid $color-green;
+                height: convertRem(45);
+                @include transition-ease-in-out;
+
+            }
+
+            .back {
+                margin-right: 1rem;
+                color: $color-green;
+                background-color: $color-white;
+
+                &:hover {
+                    background: $color-green;
+                    color: $color-white;
+                }
+            }
+
+            .submit {
+                color: $color-white;
+                background-color: $color-green;
+
+                &:hover {
+                    background: $color-white;
+                    color: $color-green;
+                }
+            }
+        }
+    }
+}

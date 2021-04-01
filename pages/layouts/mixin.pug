@@ -6,9 +6,9 @@ mixin icon-contact
     li 
         a(href="#")
             i&attributes(attributes)
-mixin signs(signs)
+mixin signs(signs,href)
     li 
-        a(href="#")
+        a(href=href)
             i&attributes(attributes) 
             | #{signs}
 mixin connects(item)
