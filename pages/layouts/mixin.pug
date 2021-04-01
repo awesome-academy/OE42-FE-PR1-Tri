@@ -30,7 +30,7 @@ mixin menu(name)
                     +submenu(item_sub)
     else if name == "Trang Chủ"
         li.nav-item 
-            a.nav-link.active(href="list-products.html")= name
+            a.nav-link.active(href="index.html")= name
     else
         li.nav-item 
             a.nav-link(href="#")= name 
@@ -155,3 +155,16 @@ mixin list_view(img, name, des, price)
                     i(class=search_product)
                 a(href="#")
                     i(class=heart_product)
+
+mixin cart_item(img, name, unit_price, count, into_money)
+    tr
+        td.img
+            img(src=img, alt="link error")
+        td.name-product= name 
+        td.unit-price= unit_price 
+        td.count
+            input(type="text", value=`${count}`)
+        td.into-money= into_money 
+        td.delete
+            a(href="#")
+                i&attributes(attributes)

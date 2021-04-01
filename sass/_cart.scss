@@ -1,0 +1,269 @@
+#main__cart-product {
+    margin-bottom: convertRem(215);
+
+    .section__cart-header {
+        padding: 0.75rem 0;
+        margin-bottom: convertRem(44);
+
+        a {
+            font-size: 0.825rem;
+            color: $color-gray;
+
+            &.list {
+                color: $color-green;
+                @include transition-ease-in-out;
+
+                &:hover {
+                    color: $color-dark-green;
+                }
+            }
+
+        }
+
+        span {
+            position: relative;
+            margin: 0 0.25rem;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: convertRem(13);
+                border-right: 1px solid $color-gray;
+                right: 0;
+                top: 5px;
+                transform: rotate(30deg);
+            }
+        }
+    }
+
+    .section__cart-content {
+        .cart-header {
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: $color-green;
+            margin-bottom: convertRem(80);
+        }
+
+        .cart-content {
+
+            .info-cart-table {
+                width: 100%;
+                margin-bottom: convertRem(45);
+
+                tr {
+                    display: flex;
+
+                    th {
+                        text-transform: uppercase;
+                        color: $color-white;
+                        background: $color-green;
+                        font-weight: 200;
+                        font-size: 0.95rem;
+                        height: convertRem(50);
+                        border-right: 1px solid #b7b7b7;
+                        @include flexCenter(row);
+
+                        &:last-child {
+                            border: 0;
+                        }
+
+                        &.img {
+                            width: convertRem(190);
+                        }
+
+                        &.name-product {
+                            width: convertRem(270);
+                        }
+
+                        &.unit-price {
+                            width: convertRem(160);
+                        }
+
+                        &.count {
+                            width: convertRem(155);
+                        }
+
+                        &.into-money {
+                            width: convertRem(250);
+                        }
+
+                        &.delete {
+                            width: convertRem(115);
+                        }
+                    }
+
+                }
+
+                tbody {
+
+                    tr {
+                        td {
+                            font-size: 1.25rem;
+                            color: $color-gray;
+                            padding: 1.25rem;
+                            border-right: 1px solid $color-border-product;
+                            border-bottom: 1px solid $color-border-product;
+                            @include flexCenter(row);
+
+                            &:first-child {
+                                border-left: 1px solid $color-border-product;
+                            }
+
+                            &.img {
+                                width: convertRem(190);
+                            }
+
+                            &.name-product {
+                                width: convertRem(270);
+                                text-transform: uppercase;
+                                color: $color-green;
+                                font-weight: 600;
+                                font-size: 1rem;
+                            }
+
+                            &.unit-price {
+                                width: convertRem(160);
+                            }
+
+                            &.count {
+                                width: convertRem(155);
+                            }
+
+                            &.into-money {
+                                width: convertRem(250);
+                            }
+
+                            &.delete {
+                                width: convertRem(115);
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            input {
+                                font-size: 1.5rem;
+                                color: $color-gray;
+                                width: convertRem(45);
+                                height: convertRem(45);
+                                text-align: center;
+                                border: 1px solid $color-border-product;
+                            }
+
+                            a {
+                                color: $color-gray;
+                                @include transition-ease-in-out;
+
+                                &:hover {
+                                    color: $color-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button {
+                text-align: right;
+                margin-bottom: convertRem(70);
+
+                button {
+                    height: convertRem(45);
+                    border-radius: 1.875rem;
+                    width: convertRem(145);
+                    border: 1px solid $color-green;
+                    @include transition-ease-in-out;
+                    text-transform: uppercase;
+                    font-size: 0.85rem;
+
+                    &.cancel-order {
+                        color: $color-green;
+                        background: $color-white;
+                        margin-right: convertRem(20);
+
+                        &:hover {
+                            color: $color-white;
+                            background: $color-green;
+                        }
+                    }
+
+                    &.continue-buy {
+                        color: $color-white;
+                        background: $color-green;
+
+                        &:hover {
+                            color: $color-green;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+
+            .table-price {
+
+                table {
+                    margin-bottom: convertRem(36);
+                    margin-left: auto;
+                    border: 1px solid $color-border-product;
+
+                    tr {
+                        width: convertRem(680);
+                        height: convertRem(90);
+                        border: 1px solid $color-border-product;
+
+
+                        td {
+                            color: $color-green;
+                            border: 1px solid $color-border-product;
+                            font-weight: 600;
+
+                            &:first-child {
+                                width: convertRem(440);
+                                text-transform: uppercase;
+                                text-indent: 150px;
+                                font-size: 0.9rem;
+                            }
+
+                            &:last-child {
+                                width: convertRem(240);
+                                text-indent: 80px;
+                            }
+                        }
+
+                        &:last-child {
+                            td {
+                                font-size: 1.125rem;
+                                color: $color-white;
+                                background: $color-green;
+
+                                &:first-child {
+                                    border-right-color: #b7b7b7;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    float: right;
+                    height: convertRem(45);
+                    border-radius: 1.875rem;
+                    width: convertRem(145);
+                    border: 1px solid #49cc80;
+                    @include transition-ease-in-out;
+                    text-transform: uppercase;
+                    font-size: 0.825rem;
+                    color: $color-white;
+                    background: #49cc80;
+
+                    &:hover {
+                        background: $color-white;
+                        color: #49cc80;
+                    }
+                }
+            }
+        }
+    }
+}
