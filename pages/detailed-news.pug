@@ -37,7 +37,7 @@ block main
                                     +blog_tag(item)
                     .col-12.col-md-8.col-lg-9.detail-news 
                         a(href="")
-                            h5 Cách bố trí hoa chậu trước cửa ngay lần đầu tiên
+                            h5 Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên
                         .icon
                             span.date 
                                 i(class=icon_date)
@@ -99,17 +99,13 @@ block main
                             h4 Viết Bình Luận: 
                             form(action="" method="POST")
                                 .form-input 
-                                    .name 
-                                        label(for="name") Họ và Tên: 
-                                        input(type="text" id="name") 
+                                    .name   
+                                        +input("text")(id="name",placeholder="Họ và tên:")
                                     .email 
-                                        label(for="email") Email: 
-                                        input(type="text" id="email")
-                                    .phone 
-                                        label(for="phone") Phone: 
-                                        input(type="text" id="phone")
+                                        +input("text")(id="email", placeholder="Email:")
+                                    .phone
+                                        +input("text")(id="phone", placeholder="Phone:")
                                 .form-textarea 
-                                    label(for="comment") Bình luận
-                                    textarea#comment(name="comment")
+                                    textarea#comment(name="comment" placeholder="Bình luận")
                                 .submit 
                                     button(type="submit") Gửi 

@@ -2,6 +2,11 @@
     .section__list-product-content {
         margin-bottom: convertRem(155);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .title {
             position: relative;
             margin-bottom: 1.5rem;

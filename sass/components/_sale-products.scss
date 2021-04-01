@@ -5,8 +5,28 @@
 .section__products-general {
     .products-sale {
         .product-items-sale {
+            @include responsive($breakpoint-sm) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
             .item {
                 margin-bottom: convertRem(30);
+
+                @include responsive($breakpoint-md) {
+                    display: none;
+
+                    &:first-child,
+                    &:nth-child(2) {
+                        display: block;
+                    }
+                }
+
+                @include responsive($breakpoint-sm) {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                }
 
                 .wrapper {
                     width: 100%;
@@ -17,6 +37,10 @@
                         width: 100%;
                         height: convertRem(220);
                         position: relative;
+
+                        @include responsive($breakpoint-sm) {
+                            height: 100%;
+                        }
 
                         img {
                             width: 100%;

@@ -11,6 +11,11 @@ mixin signs(signs,href)
         a(href=href)
             i&attributes(attributes) 
             | #{signs}
+mixin signs-mobile(signs,href)
+    li.nav-item.sign 
+        a(href=href).nav-link
+            i&attributes(attributes) 
+            | #{signs}
 mixin connects(item)
     li 
         span
@@ -206,3 +211,15 @@ mixin news_list(title, date, time, comment, img, text)
             img(src=img, alt="link error")
         .text 
             p= text
+mixin input(type)
+    input(type=type)&attributes(attributes)
+
+mixin label_input(id,name_label)
+    .col-12.col-md-6.item
+        label(for=id)= name_label 
+        input(type="text" id=id)
+
+mixin label_input_item(id,name_label)
+    .item 
+        label(for=id)= name_label 
+        input(type="text" id=id)

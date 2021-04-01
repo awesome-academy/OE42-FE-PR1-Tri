@@ -1,8 +1,30 @@
 .section__similar-product {
     margin-bottom: convertRem(50);
 
+    @include responsive($breakpoint-sm) {
+        padding: 0 15px;
+    }
+
     .item {
         margin-bottom: convertRem(30);
+
+        @include responsive($breakpoint-xl) {
+            &:last-child {
+                display: none;
+            }
+        }
+
+        @include responsive($breakpoint-lg) {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @include responsive($breakpoint-sm) {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
 
         .wrapper {
             width: 100%;
@@ -11,7 +33,6 @@
 
             .img {
                 width: 100%;
-                height: convertRem(220);
                 position: relative;
 
                 img {

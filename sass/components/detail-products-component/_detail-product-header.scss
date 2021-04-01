@@ -3,6 +3,11 @@
         padding: 0.75rem 0;
         margin-bottom: convertRem(30);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         a {
             font-size: 0.825rem;
             color: $color-gray;

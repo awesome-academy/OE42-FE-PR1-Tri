@@ -16,16 +16,17 @@ block main
             .container
                 h4.cart-header Giỏ Hàng 
                 .cart-content 
-                    table.info-cart-table
-                        thead  
-                            tr 
-                                each item_th in table_th
-                                    - const {classes, name} = item_th
-                                    th(class=classes)= name 
-                        tbody 
-                            each item in table_td
-                                - const {img, name, unit_price, count, into_money} = item 
-                                    +cart_item(img, name, unit_price, count, into_money)(class=icon_delete)
+                    .cart-table
+                        table.info-cart-table
+                            thead  
+                                tr 
+                                    each item_th in table_th
+                                        - const {classes, name} = item_th
+                                        th(class=classes)= name 
+                            tbody 
+                                each item in table_td
+                                    - const {img, name, unit_price, count, into_money} = item 
+                                        +cart_item(img, name, unit_price, count, into_money)(class=icon_delete)
                     .button
                         button.cancel-order(type="button") Hủy đơn hàng 
                         button.continue-buy(type="button") Tiếp tục mua
@@ -41,3 +42,42 @@ block main
                                 td Tổng phải thanh toán
                                 td 297.000 đ
                         button Thanh toán
+        section.section__process-pay
+            .container
+                .process-pay-content
+                    form#form__customer(onsubmit = "onsubmitFormCustomer(event)")
+                        .row
+                            .col-12.col-md-6.item 
+                                label(for="name-customer") Họ Tên
+                                input#name-customer(type="text" name="name-customer" required)
+                            .col-12.col-md-6.item 
+                                label(for="phone-customer") Số ĐT
+                                input#phone-customer(type="text" name="phone-customer" required)
+                            .col-12.col-md-6.item 
+                                label(for="email-customer") Email
+                                input#email-customer(type="text" name="email-customer" required)
+                            .col-12.col-md-6.item 
+                                label(for="address-customer") Địa chỉ nhận hàng
+                                input#address-customer(type="text" name="address-customer" required)
+                            button(type="submit") Gửi
+                    .confirm-info-order
+                        .info-order
+                            p#name Tên khách hàng: 
+                            p#phone Số ĐT: 
+                            p#email Email: 
+                            p#address Địa chỉ nhận hàng: 
+                            p#sum-price-confirm Tổng tiền(chưa thuế):
+                            p#tax-confirm Thuế(VAT 10%):
+                            p#sum-pay-confirm Tổng phải thanh toán:
+                        .button
+                            button.cancel-order(type="button" onclick="cancelOrder()") Hủy Đơn Hàng
+                            button.continue-buy(type="button" id="confirm-order") Thanh Toán
+                .process-order 
+                    ul 
+                        li#info-cart Thông tin giỏ hàng 
+                            span
+                        li#info-customer Thông tin khách hàng 
+                            span
+                        li#confirm-pay Thông tin thanh toán
+                            span              
+        article#article__toast_msg

@@ -4,11 +4,19 @@
             height: convertRem(160);
             margin-bottom: 1.5rem;
 
+            @include responsive($breakpoint-sm) {
+                height: convertRem(100);
+            }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center bottom;
+
+                @include responsive($breakpoint-sm) {
+                    object-position: left bottom;
+                }
             }
         }
     }

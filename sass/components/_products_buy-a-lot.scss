@@ -3,8 +3,14 @@
 
 
 .section__products-general {
+    @include responsive($breakpoint-sm) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
     .products-buy-a-lot {
+        margin-bottom: 2.25rem;
+
         .product-items {
             li {
                 padding: convertRem(23.6) convertRem(25);
@@ -14,6 +20,15 @@
 
                 &:last-child {
                     border-bottom: 1px solid $color-border-product;
+                }
+
+                @include responsive($breakpoint-md) {
+
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        display: none;
+                    }
                 }
 
                 .img {

@@ -49,7 +49,16 @@ header.header
         .container  
             button.navbar-toggler(type="button", data-toggle="collapse", data-target="#collapseResponsive",aria-controls="collapseResponsive" aria-expanded="false" aria-label="Toggle navigation")
                 span.navbar-toggler-icon
+            ul.icon 
+                li
+                    a(href="#")
+                        i(class=search)
+                li
+                    a(href="/cart.html")
+                        i(class=shopping_cart)
             .collapse.navbar-collapse#collapseResponsive
                 ul.navbar-nav
                     each item in nav_links
                         +menu(item)
+                    each signs in users
+                        +signs-mobile(signs.log, signs.href)(class=signs.classes)
