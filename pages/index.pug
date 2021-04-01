@@ -162,3 +162,23 @@ block main
                     each item in news_homepage
                         - const {img, date, title, text} = item 
                             +news-homepage(img, date, title, text)
+        input(type="checkbox" id="check-popup")
+        article.article__popup
+            .wrapper
+                label.close_icon(for="check-popup")
+                    i(class=icon_close)
+                .content
+                    .img 
+                        img(src=`${link_images}/popup.jpg`, alt="popup")
+                    .description
+                        h5 Nhận tin tức từ chúng tôi 
+                        span Đăng ký email ngay hôm nay 
+                        div.email 
+                            input(type="text" placeholder="Nhập email của bạn vào đây")
+                            button(type="submit")
+                                i(class=paper_plane)
+                        p Đăng ký nhận email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi 
+                        .check 
+                            input(type="checkbox" id="check-none-notification")
+                            label(for="check-none-notification") Không hiển thị lại thông báo này nữa
+
