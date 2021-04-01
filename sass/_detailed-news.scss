@@ -1,0 +1,226 @@
+.detail-news {
+    margin-bottom: convertRem(100);
+
+    a {
+        h5 {
+            font-size: 1.1rem;
+            color: rgb(105, 105, 105);
+            text-shadow: 0px 0px 0px rgb(105, 105, 105);
+        }
+    }
+
+    .icon {
+        margin-bottom: convertRem(18);
+
+        span {
+            font-family: $font-default;
+            font-size: 0.75rem;
+            color: $color-text-footer;
+            margin-right: convertRem(18);
+
+            i {
+                margin-right: 0.25rem;
+                color: $color-green;
+            }
+
+            a {
+                font-family: $font-default;
+                color: $color-text-footer;
+            }
+        }
+    }
+
+    .img {
+        width: 100%;
+        height: convertRem(380);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:last-child {
+            margin-top: convertRem(30);
+        }
+    }
+
+    .text {
+        margin-top: 2rem;
+
+        p {
+            font-size: 0.73rem;
+            font-family: $font-default;
+            color: $color-gray;
+            line-height: 1.7;
+        }
+    }
+}
+
+.comments {
+    margin-left: auto;
+
+    .comment {
+        margin-bottom: 2.25rem;
+    }
+
+    h5 {
+        font-family: $font-default;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $color-gray;
+        font-size: 1.125rem;
+    }
+
+    .comment-list {
+        border-bottom: 1px solid $color-border-product;
+
+        .comment-parent {
+            display: flex;
+            min-height: convertRem(170);
+            padding: 2.25rem 0;
+        }
+
+        .comment-children {
+            width: calc(100% - 110px);
+            @extend .comment-parent;
+            margin-left: auto;
+            border-top: 1px solid $color-border-product;
+        }
+    }
+}
+
+.avatar {
+    width: convertRem(110);
+
+    img {
+        @include circle(75);
+    }
+}
+
+.des {
+    width: calc(100% - 110px);
+
+    a {
+        float: right;
+        font-family: $font-default;
+        font-size: 0.725rem;
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    p {
+        padding-right: 2rem;
+        font-family: $font-default;
+
+        &.name {
+            font-size: 0.95rem;
+        }
+
+        &.text {
+            color: $color-gray;
+            font-size: 0.775rem;
+        }
+
+        &.date {
+            @extend .text;
+            font-style: italic;
+        }
+    }
+}
+
+.write-comment {
+    h4 {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $color-gray;
+        font-family: $font-default;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        .form-input {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.375rem;
+
+            div {
+                width: 30%;
+                height: convertRem(45);
+                position: relative;
+
+                label {
+                    position: absolute;
+                    top: 11px;
+                    font-size: 0.8rem;
+                    left: 24px;
+                    color: $color-gray;
+                }
+
+                input {
+                    width: 100%;
+                    border: 1px solid $color-border-product;
+                    height: 100%;
+                    padding-left: convertRem(90);
+                    @include transition-ease-in-out;
+                    font-size: 0.8rem;
+                    color: $color-gray;
+
+                    &:focus {
+                        border-color: $color-green;
+                    }
+                }
+            }
+        }
+
+        .form-textarea {
+            position: relative;
+            margin-bottom: convertRem(48);
+
+            label {
+                position: absolute;
+                top: 11px;
+                font-size: 0.8rem;
+                left: 24px;
+                color: $color-gray;
+            }
+
+            textarea {
+                border: 1px solid $color-border-product;
+                width: 100%;
+                outline: 0;
+                height: convertRem(145);
+                resize: none;
+                padding-top: convertRem(40);
+                font-size: 0.8rem;
+                color: $color-gray;
+                @include transition-ease-in-out;
+
+                &:focus {
+                    border-color: $color-green;
+                }
+            }
+        }
+
+        .submit {
+            text-align: right;
+
+            button {
+                text-transform: uppercase;
+                width: convertRem(145);
+                height: convertRem(45);
+                color: $color-white;
+                background-color: $color-green;
+                border-radius: convertRem(30);
+                font-size: 0.85rem;
+                height: convertRem(45);
+                @include transition-ease-in-out;
+
+                &:hover {
+                    background: $color-dark-green;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+extend ./layouts/layout
+block title 
+    title Tin tức
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main 
+    include ./variables/variable_links
+    include ./variables/variable_newspage
+    main#main__news
+        section.section__news-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Tin tức
+        section.section__news-content 
+            .container 
+                .row
+                    .col-12.col-md-4.col-lg-3 
+                        .list-product
+                            .title
+                                span Danh mục sản phẩm
+                            ul
+                                each item in list_products
+                                    +list-items(item)
+                        .featured-news-list 
+                            .title 
+                                span Tin tức nổi bật 
+                            ul
+                                each item in featured_news_list
+                                    - const {img, text} = item 
+                                        +featured_news(img,text)
+                        .blog-tag 
+                            .title 
+                                span Blog tag
+                            ul
+                                each item in blog_tag
+                                    +blog_tag(item)
+                    .col-12.col-md-8.col-lg-9.news-description 
+                        ul
+                            each item in news_list
+                                - const {title, date, time, comment, img, text} = item 
+                                    +news_list(title, date, time, comment, img, text) 
+                        .change-page 
+                            ul
+                                each stt in change_page
+                                    if stt == "1"
+                                        +change_page(stt)(class="active")
+                                    else 
+                                        +change_page(stt)

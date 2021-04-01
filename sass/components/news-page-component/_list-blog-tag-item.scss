@@ -1,0 +1,26 @@
+.blog-tag {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin-right: 14px;
+            margin-bottom: 14px;
+
+            a {
+                padding: 0.5rem 1rem;
+                border: 1px solid $color-border-product;
+                color: $color-gray;
+                display: block;
+                font-size: 0.75rem;
+                @include transition-ease-in-out;
+
+                &:hover {
+                    background: $color-green;
+                    color: $color-ebebeb;
+                    border-color: $color-green;
+                }
+            }
+        }
+    }
+}

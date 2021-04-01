@@ -1,0 +1,115 @@
+extend ./layouts/layout
+block title 
+    title Tin tức
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main 
+    include ./variables/variable_links
+    include ./variables/variable_detailed-news
+    main#main__news
+        section.section__news-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Tin tức
+        section.section__news-content 
+            .container 
+                .row
+                    .col-12.col-md-4.col-lg-3 
+                        .list-product
+                            .title
+                                span Danh mục sản phẩm
+                            ul
+                                each item in list_products
+                                    +list-items(item)
+                        .featured-news-list 
+                            .title 
+                                span Tin tức nổi bật 
+                            ul
+                                each item in featured_news_list
+                                    - const {img, text} = item 
+                                        +featured_news(img,text)
+                        .blog-tag 
+                            .title 
+                                span Blog tag
+                            ul
+                                each item in blog_tag
+                                    +blog_tag(item)
+                    .col-12.col-md-8.col-lg-9.detail-news 
+                        a(href="")
+                            h5 Cách bố trí hoa chậu trước cửa ngay lần đầu tiên
+                        .icon
+                            span.date 
+                                i(class=icon_date)
+                                | 20/12/2015
+                            span.time 
+                                i(class=icon_time)
+                                | 11:20:00 AM 
+                            span.comment 
+                                i(class=icon_comment)
+                                | 0 Bình luận
+                        .img 
+                            img(src=`${link_images}/featured-news-content-1.jpg`, alt="link error")
+                        .text 
+                            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
+                            p 7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng, những mẫu cây để bàn đang được giới văn phòng ưa chuộng, cây cảnh văn phòng để bàn thông dụng, những cây cảnh được giới văn phòng ưa chuộng.
+                            p Cây bạch mã hoàng tử để bàn có chiều cao trung bình từ 20 - 40cm, dáng đẹp, lá cây màu xanh đậm với những đường vân vàng nhạt mọc đối xứng nhau trông rất sang trọng và lịch lãm.
+                            p Loại cây này ưa bóng, chịu được nhiệt độ thấp lại có khả năng tạo ẩm và thanh lọc không khí nên rất thích hợp đặt trong văn phòng làm việc có máy lạnh.
+                            p Cây bạch mã hoàng tử thường được chọn để đặt trên bàn làm việc của sếp, bàn nhỏ ở phòng tiếp khách hoặc bàn làm việc của các đấng mày râu. 
+                            p 2. Cây trầu bà đế vương 
+                            p Cây trầu bà đế vương tượng trưng cho quyền uy, phong thái dẫn đầu nên thích hợp để đặt trên bàn làm việc của người lãnh đạo, quản lý doanh nghiệp. 
+                            p Lá cây trầu bà đế vương khá to, dày, hơi bóng, đường gân rõ ràng, có hình dạng như hình trái tim, xòe rộng hướng lên trên trông rất bệ nghễ và cao sang.
+                            p Tùy thuộc vào sở thích cá nhân và thiết kế chủ đạo của không gian phòng làm việc, bạn có thể chọn loại trầu bà đế vương xanh, trầu bà đế vương vàng hoặc trầu bà đế vương đỏ. 
+                        .img 
+                            img(src=`${link_images}/featured-news-content-2.jpg`, alt="link error")
+                        .text 
+                            p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
+                            p 7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng, những mẫu cây để bàn đang được giới văn phòng ưa chuộng, cây cảnh văn phòng để bàn thông dụng, những cây cảnh được giới văn phòng ưa chuộng.
+                .row
+                    .col-12.col-md-8.col-lg-9.comments
+                        .comment
+                            h5 Bình luận (3)
+                            .comment-list 
+                                .comment-parent
+                                    .avatar 
+                                        img(src=`${link_images}/avatar.png`, alt="avatar")
+                                    .des
+                                        a(href="#") Trả lời 
+                                        p.name Nguyễn Văn An
+                                        p.text This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bidendum auctor,nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        p.date Thứ 7, 26/12/2015 12:00 AM
+                                .comment-children 
+                                    .avatar 
+                                        img(src=`${link_images}/avatar.png`, alt="avatar")
+                                    .des
+                                        a(href="#") Trả lời 
+                                        p.name Nguyễn Văn Bình
+                                        p.text This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bidendum auctor,nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        p.date Thứ 7, 26/12/2015 12:00 AM
+                            .comment-list 
+                                .comment-parent
+                                    .avatar 
+                                        img(src=`${link_images}/avatar.png`, alt="avatar")
+                                    .des
+                                        a(href="#") Trả lời  
+                                        p.name Nguyễn Văn Chiến
+                                        p.text This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bidendum auctor,nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                        p.date Thứ 7, 26/12/2015 12:00 AM
+                        .write-comment 
+                            h4 Viết Bình Luận: 
+                            form(action="" method="POST")
+                                .form-input 
+                                    .name 
+                                        label(for="name") Họ và Tên: 
+                                        input(type="text" id="name") 
+                                    .email 
+                                        label(for="email") Email: 
+                                        input(type="text" id="email")
+                                    .phone 
+                                        label(for="phone") Phone: 
+                                        input(type="text" id="phone")
+                                .form-textarea 
+                                    label(for="comment") Bình luận
+                                    textarea#comment(name="comment")
+                                .submit 
+                                    button(type="submit") Gửi 
