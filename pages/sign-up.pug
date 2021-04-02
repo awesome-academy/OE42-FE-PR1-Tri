@@ -1,0 +1,45 @@
+extend ./layouts/layout
+block title 
+    title Đăng Ký
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main
+    main#main__sign-up
+        section.section__sign-up-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Đăng ký
+        section.section__sign-up-content 
+            .container 
+                form(action="" method="POST")
+                    .personal-info
+                        h5 Thông tin cá nhân
+                        .row 
+                            .col-12.col-md-6.item
+                                label(for="name-sign-up") Họ và tên 
+                                input(type="text" id="name-sign-up") 
+                            .col-12.col-md-6.item
+                                label(for="phone-sign-up") Số ĐT 
+                                input(type="text" id="phone-sign-up")
+                            .col-12.col-md-6.item 
+                                label(for="email-sign-up") Địa chỉ email 
+                                input(type="text" id="email-sign-up")
+                            .col-12.col-md-6.item 
+                                label(for="web-sign-up") Website của bạn 
+                                input(type="text" id="web-sign-up")
+                            .col-12.col-md-12.item-checkbox
+                                input(type="checkbox" id="check-sign-up")
+                                label(for="check-sign-up") Đăng ký nhận thông tin qua email
+                    .account-info 
+                        h5 Thông tin tài khoản 
+                        .row
+                            .col-12.col-md-6.item
+                                label(for="password-sign-up") Mật khẩu
+                                input(type="password" id="password-sign-up") 
+                            .col-12.col-md-6.item
+                                label(for="confirm-password-sign-up") Nhập lại mật khẩu
+                                input(type="password" id="confirm-password-sign-up")
+                    .button 
+                        button(type="button" class="back") Quay lại 
+                        button(type="submit" class="submit") Đăng ký
