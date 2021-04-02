@@ -1980,6 +1980,118 @@ input {
     #main__sign-up .section__sign-up-content .button .submit:hover {
       background: #fff;
       color: #3fb871; }
+<<<<<<< HEAD
+=======
+
+#main__sign-in .section__sign-in-header {
+  padding: 0.75rem 0;
+  margin-bottom: 1.875rem; }
+  #main__sign-in .section__sign-in-header a {
+    font-size: 0.825rem;
+    color: #898989; }
+    #main__sign-in .section__sign-in-header a.list {
+      color: #3fb871;
+      transition: all 0.3s ease-in-out; }
+      #main__sign-in .section__sign-in-header a.list:hover {
+        color: #36a66d; }
+  #main__sign-in .section__sign-in-header span {
+    position: relative;
+    margin: 0 0.25rem; }
+    #main__sign-in .section__sign-in-header span::after {
+      position: absolute;
+      content: '';
+      height: 0.8125rem;
+      border-right: 1px solid #898989;
+      right: 0;
+      top: 5px;
+      transform: rotate(30deg); }
+
+#main__sign-in .section__sign-in-content {
+  margin-bottom: 6.875rem; }
+  #main__sign-in .section__sign-in-content .sign-in-content-left {
+    padding-right: 30px; }
+  #main__sign-in .section__sign-in-content .sign-in-content-right {
+    padding-left: 30px; }
+    #main__sign-in .section__sign-in-content .sign-in-content-right p {
+      font-size: 0.8125rem;
+      color: #898989;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7; }
+    #main__sign-in .section__sign-in-content .sign-in-content-right a {
+      text-transform: uppercase;
+      width: 9.0625rem;
+      height: 2.8125rem;
+      border-radius: 1.875rem;
+      font-size: 0.85rem;
+      border: 1px solid #3fb871;
+      height: 2.8125rem;
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+      background-color: #3fb871;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 2rem; }
+      #main__sign-in .section__sign-in-content .sign-in-content-right a:hover {
+        background: #fff;
+        color: #3fb871; }
+  #main__sign-in .section__sign-in-content h5 {
+    text-transform: uppercase;
+    color: #3fb871;
+    font-weight: 800;
+    font-size: 1.0625rem;
+    margin-bottom: 1.5rem; }
+  #main__sign-in .section__sign-in-content .item {
+    margin-bottom: 1.75rem; }
+    #main__sign-in .section__sign-in-content .item:first-child {
+      margin-top: 3.25rem; }
+    #main__sign-in .section__sign-in-content .item label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      color: #898989; }
+    #main__sign-in .section__sign-in-content .item input {
+      width: 100%;
+      border: 1px solid rgba(129, 127, 127, 0.2);
+      height: 2.625rem;
+      color: #898989;
+      font-size: 0.85rem;
+      padding-left: 1.125rem;
+      transition: all 0.3s ease-in-out; }
+      #main__sign-in .section__sign-in-content .item input:focus {
+        border-color: #3fb871; }
+  #main__sign-in .section__sign-in-content .item-checkbox {
+    margin-top: 3rem;
+    margin-bottom: 2rem; }
+    #main__sign-in .section__sign-in-content .item-checkbox label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+      margin-left: 0.5rem; }
+    #main__sign-in .section__sign-in-content .item-checkbox input {
+      transform: translateY(1px); }
+    #main__sign-in .section__sign-in-content .item-checkbox a {
+      font-size: 0.825rem;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 1.5rem;
+      text-decoration: underline;
+      color: #898989;
+      font-style: italic; }
+  #main__sign-in .section__sign-in-content button {
+    text-transform: uppercase;
+    width: 9.0625rem;
+    height: 2.8125rem;
+    border-radius: 1.875rem;
+    font-size: 0.85rem;
+    border: 1px solid #3fb871;
+    height: 2.8125rem;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    background-color: #3fb871; }
+    #main__sign-in .section__sign-in-content button:hover {
+      background: #fff;
+      color: #3fb871; }
+>>>>>>> de86e68... task-18
 
 #footer {
   background: #313131;
