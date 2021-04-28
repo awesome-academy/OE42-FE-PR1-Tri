@@ -3,6 +3,11 @@
         padding: 0.75rem 0;
         margin-bottom: convertRem(30);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         a {
             font-size: 0.825rem;
             color: $color-gray;
@@ -37,6 +42,11 @@
     .section__sign-up-content {
         margin-bottom: convertRem(100);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .personal-info {
             margin-bottom: convertRem(60);
         }
@@ -58,10 +68,18 @@
 
             &:nth-child(odd) {
                 padding-right: 30px;
+
+                @include responsive($breakpoint-md) {
+                    padding-right: 15px;
+                }
             }
 
             &:nth-child(even) {
                 padding-left: 30px;
+
+                @include responsive($breakpoint-md) {
+                    padding-left: 15px;
+                }
             }
 
             label {

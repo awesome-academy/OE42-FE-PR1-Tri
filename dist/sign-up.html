@@ -61,6 +61,10 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container"> 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseResponsive" aria-controls="collapseResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <ul class="icon"> 
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="/cart.html"><i class="fas fa-shopping-basket"></i></a></li>
+          </ul>
           <div class="collapse navbar-collapse" id="collapseResponsive">
             <ul class="navbar-nav">
               <li class="nav-item"> <a class="nav-link active" href="index.html">Trang Chủ</a></li>
@@ -86,6 +90,8 @@
               </li>
               <li class="nav-item"> <a class="nav-link" href="news-page.html">Tin Tức</a></li>
               <li class="nav-item"> <a class="nav-link" href="contact-page.html">Liên Hệ</a></li>
+              <li class="nav-item sign"> <a class="nav-link" href="sign-in.html"><i class="fas fa-user"> </i>Đăng Nhập</a></li>
+              <li class="nav-item sign"> <a class="nav-link" href="sign-up.html"><i class="fas fa-user-plus"> </i>Đăng Ký</a></li>
             </ul>
           </div>
         </div>
@@ -100,21 +106,21 @@
           <form action="" method="POST">
             <div class="personal-info">
               <h5>Thông tin cá nhân</h5>
-              <div class="row"> 
+              <div class="row">
                 <div class="col-12 col-md-6 item">
-                  <label for="name-sign-up">Họ và tên </label>
+                  <label for="name-sign-up">Họ và tên</label>
                   <input type="text" id="name-sign-up"/>
                 </div>
                 <div class="col-12 col-md-6 item">
-                  <label for="phone-sign-up">Số ĐT </label>
+                  <label for="phone-sign-up">Số ĐT</label>
                   <input type="text" id="phone-sign-up"/>
                 </div>
-                <div class="col-12 col-md-6 item"> 
-                  <label for="email-sign-up">Địa chỉ email </label>
+                <div class="col-12 col-md-6 item">
+                  <label for="email-sign-up">Địa chỉ email</label>
                   <input type="text" id="email-sign-up"/>
                 </div>
-                <div class="col-12 col-md-6 item"> 
-                  <label for="web-sign-up">Website của bạn </label>
+                <div class="col-12 col-md-6 item">
+                  <label for="web-sign-up">Website của bạn</label>
                   <input type="text" id="web-sign-up"/>
                 </div>
                 <div class="col-12 col-md-12 item-checkbox">
@@ -184,7 +190,7 @@
             </div>
             <div class="col-12 col-lg-8 footer__content-right">
               <div class="row"> 
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-3 col-lg-3">
                   <h5 class="title">Thông tin khách hàng</h5>
                   <ul> 
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Tài khoản của tôi</a></li>
@@ -194,7 +200,7 @@
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Góp ý, khiếu nại</a></li>
                   </ul>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-3 col-lg-3">
                   <h5 class="title">Hỗ trợ dịch vụ</h5>
                   <ul> 
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Hệ thống cửa hàng</a></li>
@@ -204,7 +210,7 @@
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Câu hỏi thường gặp</a></li>
                   </ul>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-3 col-lg-3">
                   <h5 class="title">Chính sách ưu đãi</h5>
                   <ul> 
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Chính sách giao hàng</a></li>
@@ -214,7 +220,7 @@
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Chính sách trả góp</a></li>
                   </ul>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-3 col-lg-3">
                   <h5 class="title">Tin tức</h5>
                   <ul> 
                     <li> <a href="#"><i class="fas fa-angle-right"></i>Tin mới</a></li>
@@ -261,5 +267,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="./js/all.js"> </script>
   </body>
 </html>

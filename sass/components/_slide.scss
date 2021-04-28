@@ -4,6 +4,18 @@
 .section__slides {
     height: 600px;
 
+    @include responsive($breakpoint-lg) {
+        height: 500px;
+    }
+
+    @include responsive($breakpoint-md) {
+        height: 400px;
+    }
+
+    @include responsive($breakpoint-sm) {
+        height: 230px;
+    }
+
     #carouselExampleIndicators {
         height: 100%;
 
@@ -30,6 +42,18 @@
                 img {
                     height: 600px;
                     object-fit: cover;
+
+                    @include responsive($breakpoint-lg) {
+                        height: 500px;
+                    }
+
+                    @include responsive($breakpoint-md) {
+                        height: 500px;
+                    }
+
+                    @include responsive($breakpoint-sm) {
+                        height: 230px;
+                    }
                 }
 
                 .title {
@@ -41,17 +65,29 @@
                     color: $color-white;
                     background: rgba(255, 255, 255, 0.1);
 
+                    @include responsive($breakpoint-md) {
+                        display: none;
+                    }
+
                     h1 {
                         text-transform: uppercase;
                         font-size: 3rem;
                         font-weight: bold;
                         margin-bottom: 1rem;
+
+                        @include responsive($breakpoint-lg) {
+                            font-size: 2.5rem;
+                        }
                     }
 
                     h5 {
                         text-transform: uppercase;
                         font-family: $font-redressed;
                         font-size: 3.5rem;
+
+                        @include responsive($breakpoint-lg) {
+                            font-size: 3rem;
+                        }
                     }
 
                     p {

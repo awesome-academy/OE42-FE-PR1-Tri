@@ -1,0 +1,33 @@
+extend ./layouts/layout
+block title 
+    title Đăng Nhập
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main
+    main#main__sign-in
+        section.section__sign-in-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Đăng nhập
+        section.section__sign-in-content 
+            .container
+                .row 
+                    .col-12.col-md-6.sign-in-content-left
+                        h5 Thông tin cá nhân
+                        form(action="" method="POST")  
+                            div.item 
+                                label(for="name-sign-up") Email của bạn 
+                                +input("text")(id="name-sign-up")
+                            div.item 
+                                label(for="password-sign-up") Mật khẩu 
+                                +input("password")(id="password-sign-up")
+                            div.item-checkbox 
+                                +input("checkbox")(id="check-sign-in")
+                                label(for="check-sign-in") Ghi nhớ tài khoản 
+                                a(href="#") Bạn quên mật khẩu ?
+                            button(type="submit") Đăng nhập
+                    .col-12.col-md-6.sign-in-content-right
+                        h5 Bạn chưa có tài khoản ?
+                        p Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+                        a(href="sign-up.html") Đăng ký 

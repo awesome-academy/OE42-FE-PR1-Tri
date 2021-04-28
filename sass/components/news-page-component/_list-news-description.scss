@@ -77,6 +77,19 @@
                     color: $color-gray;
                     border: 1px solid $color-border-product;
 
+                    @include responsive($breakpoint-sm) {
+                        padding: 0.325rem 0.725rem;
+                    }
+
+                    @include responsive(415px) {
+                        padding: 0.25rem 0.5rem;
+                    }
+
+                    @include responsive(360px) {
+                        font-size: 0.75rem;
+                        padding: 0.25rem 0.35rem;
+                    }
+
                     &.active {
                         background: $color-green;
                         border-color: $color-green;

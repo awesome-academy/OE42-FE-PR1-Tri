@@ -1,6 +1,10 @@
 #main__list-product {
     .section__list-product-content {
         .search-by-color {
+            @include responsive($breakpoint-sm) {
+                margin-bottom: 2.5rem;
+            }
+
             ul {
                 display: flex;
                 flex-wrap: wrap;

@@ -2,6 +2,11 @@
     .section__news-content {
         margin-bottom: convertRem(100);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .list-product {
             margin-bottom: convertRem(32);
 

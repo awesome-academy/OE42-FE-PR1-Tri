@@ -8,11 +8,25 @@
         padding: convertRem(40) 0;
         border-bottom: 1px solid $color-border-footer;
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+
         &-left {
+            @include responsive($breakpoint-lg-991) {
+                margin-bottom: 1.75rem;
+            }
+
             h5 {
                 font-size: 0.9rem;
                 font-weight: 600;
                 text-transform: uppercase;
+
+                @include responsive($breakpoint-md) {
+                    color: $color-green;
+                }
             }
 
             .icon {
@@ -27,6 +41,11 @@
                         &:hover {
                             color: $color-white;
                         }
+
+                        @include responsive($breakpoint-md) {
+                            font-size: 1.5rem;
+                            color: $color-white;
+                        }
                     }
                 }
             }
@@ -36,22 +55,45 @@
             display: flex;
             justify-content: space-between;
 
+            @include responsive($breakpoint-md) {
+                flex-wrap: wrap;
+            }
+
             .email {
                 width: 25%;
                 display: flex;
                 flex-direction: column;
+
+                @include responsive($breakpoint-md) {
+                    width: 100%;
+                    flex-direction: row;
+                }
 
                 span {
                     font-size: 0.9rem;
                     font-weight: 600;
                     text-transform: uppercase;
                     line-height: 1.8;
+
+                    @include responsive($breakpoint-md) {
+                        &:nth-child(1) {
+                            margin-right: 3px;
+                        }
+
+                        margin-bottom: 1rem;
+                        color: $color-green;
+                    }
                 }
             }
 
             .form-email {
                 width: 60%;
                 margin-right: 90px;
+
+                @include responsive($breakpoint-md) {
+                    width: 100%;
+                    margin-right: 0;
+                }
 
                 form {
                     width: 100%;
@@ -94,7 +136,17 @@
         border-bottom: 1px solid $color-border-footer;
         padding: convertRem(40) 0;
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+
         &-left {
+            @include responsive($breakpoint-lg-991) {
+                margin-bottom: convertRem(48);
+            }
+
             .logo {
                 margin-bottom: 1rem;
 
@@ -126,6 +178,10 @@
             }
 
             ul {
+                @include responsive($breakpoint-md) {
+                    display: none;
+                }
+
                 li {
                     line-height: 1.8;
 
@@ -142,21 +198,48 @@
         }
 
         &-right {
+            @include responsive($breakpoint-md) {
+                div {
+                    margin-bottom: convertRem(48);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
             .title {
                 font-size: 0.825rem;
                 font-weight: 600;
                 color: $color-green;
                 text-transform: uppercase;
+
+                @include responsive($breakpoint-lg-991) {
+                    font-size: 0.8rem;
+                }
+
+                @include responsive($breakpoint-md) {
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
             }
 
             ul {
                 li {
                     line-height: 2;
 
+                    @include responsive($breakpoint-md) {
+                        line-height: 2.7;
+                    }
+
                     a {
                         @include color-font-footer;
                         display: block;
                         @include transition-ease-in-out;
+
+                        @include responsive($breakpoint-md) {
+                            font-size: 0.84rem;
+                        }
 
                         i {
                             margin-right: 0.25rem;
@@ -175,6 +258,10 @@
     .footer__bottom {
         padding: convertRem(20) 0;
         border-bottom: 1px solid $color-border-footer;
+
+        @include responsive($breakpoint-lg-991) {
+            display: none;
+        }
 
         .container {
             .row {

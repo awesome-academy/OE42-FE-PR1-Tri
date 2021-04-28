@@ -1,0 +1,39 @@
+extend ./layouts/layout
+block title 
+    title Liên Hệ
+block append links
+    link(rel="stylesheet", href="./css/style.css")
+block main
+    include ./variables/variable_links 
+    include ./variables/variable_footer 
+    main#main__contact-page
+        section.section__contact-page-header
+            .container 
+                a(href="#").home Home 
+                span
+                a.list(href="#") Liên hệ
+        section.section__contact-page-content
+            .map 
+                <iframe class="w-100 h-100" src="https://maps.google.com/maps?q=Danang&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" allowfullscreen></iframe>
+            .container
+                .row
+                    .col-12.col-md-6.contact-page-content-left
+                        h5 Thông tin liên hệ
+                        form(action="" method="POST")  
+                            +label_input_item("name-contact","Họ và tên")
+                            +label_input_item("email-contact","Địa chỉ email")
+                            +label_input_item("phone-contact","Số ĐT")
+                            div.item 
+                                label(for="comment-contact") Bình luận
+                                textarea#comment-contact(name="comment-contact") 
+                    .col-12.col-md-6.contact-page-content-right
+                        div.logo 
+                            h1 
+                                a(href="index.html") Green
+                                    span Shop
+                            span Món quà từ thiên nhiên
+                        p.text DKT được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực Thương mại điện tử. Chúng tôi đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm
+                        ul 
+                            each item in connects
+                                - const {classes, description} = item
+                                    +connects(description)(class=classes)

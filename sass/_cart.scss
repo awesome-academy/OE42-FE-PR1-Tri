@@ -5,6 +5,11 @@
         padding: 0.75rem 0;
         margin-bottom: convertRem(44);
 
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         a {
             font-size: 0.825rem;
             color: $color-gray;
@@ -37,6 +42,11 @@
     }
 
     .section__cart-content {
+        @include responsive($breakpoint-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .cart-header {
             font-size: 1rem;
             text-transform: uppercase;
@@ -46,10 +56,12 @@
         }
 
         .cart-content {
+            .cart-table {
+                overflow-x: auto;
+            }
 
             .info-cart-table {
                 width: 100%;
-                margin-bottom: convertRem(45);
 
                 tr {
                     display: flex;
@@ -64,32 +76,66 @@
                         border-right: 1px solid #b7b7b7;
                         @include flexCenter(row);
 
+                        @include responsive($breakpoint-md) {
+                            font-size: 0.85rem;
+                        }
+
+                        @include responsive($breakpoint-sm) {
+                            font-size: 0.75rem;
+                        }
+
                         &:last-child {
                             border: 0;
                         }
 
                         &.img {
-                            width: convertRem(190);
+                            width: 17%;
                         }
 
                         &.name-product {
-                            width: convertRem(270);
+                            width: 23.5%;
                         }
 
                         &.unit-price {
-                            width: convertRem(160);
+                            width: 14%;
                         }
 
                         &.count {
-                            width: convertRem(155);
+                            width: 13.5%;
                         }
 
                         &.into-money {
-                            width: convertRem(250);
+                            width: 22%;
                         }
 
                         &.delete {
-                            width: convertRem(115);
+                            width: 10%;
+                        }
+
+                        @include responsive(500px) {
+                            &.img {
+                                width: 90px;
+                            }
+
+                            &.name-product {
+                                width: 123px;
+                            }
+
+                            &.unit-price {
+                                width: 73px;
+                            }
+
+                            &.count {
+                                width: 71px;
+                            }
+
+                            &.into-money {
+                                width: 116px;
+                            }
+
+                            &.delete {
+                                width: 53px;
+                            }
                         }
                     }
 
@@ -101,7 +147,6 @@
                         td {
                             font-size: 1.25rem;
                             color: $color-gray;
-                            padding: 1.25rem;
                             border-right: 1px solid $color-border-product;
                             border-bottom: 1px solid $color-border-product;
                             @include flexCenter(row);
@@ -110,32 +155,123 @@
                                 border-left: 1px solid $color-border-product;
                             }
 
+                            @include responsive(500px) {
+                                &.img {
+                                    width: 90px;
+                                }
+
+                                &.name-product {
+                                    width: 123px;
+                                }
+
+                                &.unit-price {
+                                    width: 73px;
+                                }
+
+                                &.count {
+                                    width: 71px;
+                                }
+
+                                &.into-money {
+                                    width: 116px;
+                                }
+
+                                &.delete {
+                                    width: 53px;
+                                }
+                            }
+
                             &.img {
-                                width: convertRem(190);
+                                width: 17%;
+                                padding: 1.25rem;
+
+                                @include responsive($breakpoint-md) {
+                                    padding: 1rem;
+                                }
+
+                                @include responsive($breakpoint-md) {
+                                    padding: 0.5rem;
+                                }
                             }
 
                             &.name-product {
-                                width: convertRem(270);
+                                width: 23.5%;
                                 text-transform: uppercase;
                                 color: $color-green;
                                 font-weight: 600;
                                 font-size: 1rem;
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 1rem;
+                                }
+
+                                @include responsive($breakpoint-md) {
+                                    font-size: 0.85rem;
+                                }
+
+                                @include responsive($breakpoint-sm) {
+                                    font-size: 0.75rem;
+                                }
                             }
 
                             &.unit-price {
-                                width: convertRem(160);
+                                width: 14%;
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 1rem;
+                                }
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 0.85rem;
+                                }
                             }
 
                             &.count {
-                                width: convertRem(155);
+                                width: 13.5%;
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 1rem;
+
+                                    input {
+                                        font-size: 1.25rem;
+                                        height: 40px;
+                                        width: 40px;
+                                    }
+                                }
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 0.85rem;
+
+                                    input {
+                                        font-size: 1rem;
+                                        height: 35px;
+                                        width: 35px;
+                                    }
+                                }
                             }
 
                             &.into-money {
-                                width: convertRem(250);
+                                width: 22%;
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 1rem;
+                                }
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 0.85rem;
+                                }
                             }
 
                             &.delete {
-                                width: convertRem(115);
+                                width: 10%;
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 1rem;
+                                }
+
+                                @include responsive($breakpoint-lg) {
+                                    font-size: 0.85rem;
+                                }
                             }
 
                             img {
@@ -167,6 +303,7 @@
 
             .button {
                 text-align: right;
+                margin-top: convertRem(45);
                 margin-bottom: convertRem(70);
 
                 button {
@@ -177,6 +314,18 @@
                     @include transition-ease-in-out;
                     text-transform: uppercase;
                     font-size: 0.85rem;
+
+                    @include responsive($breakpoint-md) {
+                        height: convertRem(40);
+                        width: convertRem(135);
+                    }
+
+                    @include responsive($breakpoint-sm) {
+                        height: 2rem;
+                        width: 7rem;
+                        font-size: 0.75rem;
+
+                    }
 
                     &.cancel-order {
                         color: $color-green;
@@ -224,11 +373,39 @@
                                 text-transform: uppercase;
                                 text-indent: 150px;
                                 font-size: 0.9rem;
+
+                                @include responsive($breakpoint-md) {
+                                    text-indent: 100px;
+                                }
+
+                                @include responsive($breakpoint-sm) {
+                                    text-indent: 40px;
+                                    font-size: 0.85rem;
+                                }
+
+                                @include responsive(500px) {
+                                    text-indent: 10px;
+                                    font-size: 0.75rem;
+                                }
                             }
 
                             &:last-child {
                                 width: convertRem(240);
                                 text-indent: 80px;
+
+                                @include responsive($breakpoint-md) {
+                                    text-indent: 60px;
+                                }
+
+                                @include responsive($breakpoint-sm) {
+                                    text-indent: 40px;
+                                    font-size: 0.85rem;
+                                }
+
+                                @include responsive(360px) {
+                                    font-size: 0.75rem;
+                                    text-indent: 10px;
+                                }
                             }
                         }
 
@@ -237,6 +414,18 @@
                                 font-size: 1.125rem;
                                 color: $color-white;
                                 background: $color-green;
+
+                                @include responsive($breakpoint-md) {
+                                    font-size: 1rem;
+                                }
+
+                                @include responsive($breakpoint-sm) {
+                                    font-size: 0.85rem;
+                                }
+
+                                @include responsive(500px) {
+                                    font-size: 0.8rem;
+                                }
 
                                 &:first-child {
                                     border-right-color: #b7b7b7;
@@ -258,9 +447,235 @@
                     color: $color-white;
                     background: #49cc80;
 
+                    @include responsive($breakpoint-md) {
+                        height: convertRem(40);
+                        width: convertRem(135);
+                    }
+
+                    @include responsive($breakpoint-sm) {
+                        height: 2rem;
+                        width: 7rem;
+                        font-size: 0.75rem;
+
+                    }
+
                     &:hover {
                         background: $color-white;
                         color: #49cc80;
+                    }
+                }
+            }
+        }
+    }
+
+    .section__process-pay {
+        display: none;
+
+        .process-pay-content {
+            form {
+                width: 100%;
+
+                .item {
+                    margin-bottom: 1.75rem;
+
+                    &:nth-child(odd) {
+                        padding-right: 30px;
+
+                        @include responsive($breakpoint-md) {
+                            padding-right: 15px;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        padding-left: 30px;
+
+                        @include responsive($breakpoint-md) {
+                            padding-left: 15px;
+                        }
+                    }
+
+                    label {
+                        position: relative;
+                        font-family: $font-default;
+                        font-size: 0.85rem;
+                        color: $color-gray;
+
+                        &::after {
+                            position: absolute;
+                            content: '\2736';
+                            color: $color-red;
+                            font-size: 0.625rem;
+                            right: -10px;
+                            top: -2px;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        border: 1px solid $color-border-product;
+                        height: convertRem(42);
+                        color: $color-gray;
+                        font-size: 0.85rem;
+                        padding-left: 1.125rem;
+                        @include transition-ease-in-out;
+
+                        &:focus {
+                            border-color: $color-green;
+                        }
+                    }
+
+                }
+
+                button {
+                    margin-left: auto;
+                    height: 2.8125rem;
+                    border-radius: 1.875rem;
+                    width: 9.0625rem;
+                    border: 1px solid #49cc80;
+                    text-transform: uppercase;
+                    font-size: 0.825rem;
+                    color: #fff;
+                    background: #49cc80;
+                    @include transition-ease-in-out;
+                }
+            }
+
+            .confirm-info-order {
+                display: none;
+
+                .info-order {
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                .button {
+                    margin-top: 2rem;
+
+                    button {
+                        height: convertRem(45);
+                        border-radius: 1.875rem;
+                        width: convertRem(145);
+                        border: 1px solid $color-green;
+                        @include transition-ease-in-out;
+                        text-transform: uppercase;
+                        font-size: 0.85rem;
+
+                        @include responsive($breakpoint-md) {
+                            height: convertRem(40);
+                            width: convertRem(135);
+                        }
+
+                        @include responsive($breakpoint-sm) {
+                            height: 2rem;
+                            width: 7rem;
+                            font-size: 0.75rem;
+
+                        }
+
+                        &.cancel-order {
+                            color: $color-green;
+                            background: $color-white;
+                            margin-right: convertRem(20);
+
+                            &:hover {
+                                color: $color-white;
+                                background: $color-green;
+                            }
+                        }
+
+                        &.continue-buy {
+                            color: $color-white;
+                            background: $color-green;
+
+                            &:hover {
+                                color: $color-green;
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .process-order {
+            margin-top: convertRem(48);
+
+            ul {
+                display: flex;
+
+                @include responsive($breakpoint-md) {
+                    display: block;
+                }
+
+                li {
+                    padding: 0 1rem;
+                    height: 2rem;
+                    text-transform: uppercase;
+                    position: relative;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+
+                    @include responsive($breakpoint-md) {
+                        justify-content: center;
+                        margin-top: 1rem;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 22px;
+                            height: 22px;
+                            border-top: 1px solid rgba(0, 0, 0, 0.1);
+                            border-right: 1px solid rgba(0, 0, 0, 0.1);
+                            transform: rotate(45deg);
+                            top: 4px;
+                            left: -10px;
+                            z-index: 1;
+                            background: #fff;
+                        }
+                    }
+
+                    &:first-child {
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 22px;
+                            height: 22px;
+                            border-top: 1px solid rgba(0, 0, 0, 0.1);
+                            border-right: 1px solid rgba(0, 0, 0, 0.1);
+                            transform: rotate(45deg);
+                            top: 4px;
+                            left: -10px;
+                            z-index: 1;
+                        }
+                    }
+
+                    span {
+                        position: absolute;
+                        content: '';
+                        width: 22px;
+                        height: 22px;
+                        border-top: 1px solid rgba(0, 0, 0, 0.1);
+                        border-right: 1px solid rgba(0, 0, 0, 0.1);
+                        transform: rotate(45deg);
+                        top: 4px;
+                        right: -10px;
+                        z-index: 1;
+                    }
+
+                    &#info-cart {
+                        color: $color-white;
+                        background: $color-green;
+
+                        &::before {
+                            background: $color-white;
+                        }
+
+                        span {
+                            background: $color-green;
+                        }
                     }
                 }
             }

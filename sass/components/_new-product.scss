@@ -2,8 +2,41 @@
 @import '../partials/mixins';
 
 .section__new-products {
+    @include responsive($breakpoint-sm) {
+        padding: 0 15px;
+    }
+
+    .new-products-item {
+        @include responsive($breakpoint-sm) {
+            padding: 0 1rem;
+        }
+    }
+
     .item {
         margin-bottom: convertRem(30);
+
+        @include responsive($breakpoint-xl) {
+
+            &:nth-child(7),
+            &:last-child {
+                display: none;
+            }
+        }
+
+        @include responsive($breakpoint-md) {
+            display: none;
+
+            &:first-child,
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+
+        @include responsive($breakpoint-sm) {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
 
         .wrapper {
             width: 100%;
@@ -12,8 +45,11 @@
 
             .img {
                 width: 100%;
-                height: convertRem(220);
                 position: relative;
+
+                @include responsive($breakpoint-sm) {
+                    height: 100%;
+                }
 
                 img {
                     width: 100%;

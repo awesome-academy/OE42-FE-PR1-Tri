@@ -15,21 +15,13 @@ block main
                 form(action="" method="POST")
                     .personal-info
                         h5 Thông tin cá nhân
-                        .row 
-                            .col-12.col-md-6.item
-                                label(for="name-sign-up") Họ và tên 
-                                input(type="text" id="name-sign-up") 
-                            .col-12.col-md-6.item
-                                label(for="phone-sign-up") Số ĐT 
-                                input(type="text" id="phone-sign-up")
-                            .col-12.col-md-6.item 
-                                label(for="email-sign-up") Địa chỉ email 
-                                input(type="text" id="email-sign-up")
-                            .col-12.col-md-6.item 
-                                label(for="web-sign-up") Website của bạn 
-                                input(type="text" id="web-sign-up")
+                        .row
+                            +label_input("name-sign-up", "Họ và tên")
+                            +label_input("phone-sign-up", "Số ĐT") 
+                            +label_input("email-sign-up", "Địa chỉ email")
+                            +label_input("web-sign-up", "Website của bạn")
                             .col-12.col-md-12.item-checkbox
-                                input(type="checkbox" id="check-sign-up")
+                                +input("checkbox")(id="check-sign-up")
                                 label(for="check-sign-up") Đăng ký nhận thông tin qua email
                     .account-info 
                         h5 Thông tin tài khoản 
